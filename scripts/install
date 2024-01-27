@@ -51,6 +51,8 @@ popd
 
 mv $install_dir/build/dist $install_dir
 pushd $install_dir/dist
+    domainandpath="$domain$path"
+    domainandpath=${domainandpath%%+(/)}
     sed -i s/pipedapi.kavin.rocks/"$domain\/$path\/api"/g assets/*
 popd
 chown -R $app:www-data "$install_dir/dist"
