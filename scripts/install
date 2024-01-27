@@ -66,7 +66,7 @@ mv $install_dir/build_api/build/libs/piped-1.0-all.jar $install_dir/piped.jar
 ynh_script_progression --message="Building Proxy..." --weight=5
 
 pushd $install_dir/build_proxy
-    ynh_exec_warn_less ynh_exec_as $app cargo build --release
+    ynh_exec_warn_less ynh_exec_as $app env PATH=$PATH cargo build --release
 popd
 
 mv $install_dir/build_proxy/target/release/piped-proxy $install_dir
