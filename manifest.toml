@@ -19,7 +19,7 @@ code = "https://github.com/TeamPiped/Piped"
 
 [integration]
 yunohost = '>= 11.2'
-architectures = ["all"]
+architectures = "all"
 multi_instance = true
 ldap = false
 sso = false
