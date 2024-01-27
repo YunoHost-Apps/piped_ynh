@@ -50,6 +50,9 @@ pushd $install_dir/build
 popd
 
 mv $install_dir/build/dist $install_dir
+pushd $install_dir/dist
+    sed -i s/pipedapi.kavin.rocks/"$domain\/$path\/api"/g /usr/share/nginx/html/assets/*
+popd
 chown -R $app:www-data "$install_dir/dist"
 chmod -R 755 "$install_dir/dist"
 
