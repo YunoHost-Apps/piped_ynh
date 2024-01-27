@@ -54,7 +54,7 @@ pushd $install_dir/dist
     domainandpath="$domain$path"
     domainandpath=${domainandpath%%+(/)}
     domainpathapi="$domain$path/api"
-    sed -i s/pipedapi.kavin.rocks/"$domainandpath"/g assets/*
+    sed -i s/pipedapi.kavin.rocks/"$domainpathapi"/g assets/*
 popd
 chown -R $app:www-data "$install_dir/dist"
 chmod -R 755 "$install_dir/dist"
