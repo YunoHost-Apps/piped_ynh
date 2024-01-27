@@ -11,10 +11,17 @@ source /usr/share/yunohost/helpers
 #=================================================
 # INSTALL DEPENDENCIES
 #=================================================
-ynh_script_progression --message="Installing dependencies..." --weight=1
+ynh_script_progression --message="Installing dependencies..." --weight=3
 
 ynh_install_nodejs --nodejs_version=$NODEJS_VERSION
 ynh_use_nodejs
+
+ynh_setup_source --dest_dir="$install_dir/jdk" --source_id="jdk"
+
+export JAVA_HOME="$install_dir/jdk"
+
+ynh_exec_warn_less ynh_exec_as $app RUSTUP_HOME="$install_dir"/.rustup CARGO_HOME="$install_dir"/.cargo bash -c 'curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -q -y'
+export PATH="$install_dir/jdk/bin:$install_dir/.cargo/bin:$PATH"
 
 #=================================================
 # APP "BUILD" (DEPLOYING SOURCES, VENV, COMPILING ETC)
@@ -25,24 +32,42 @@ ynh_script_progression --message="Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir/build"
 
+ynh_setup_source --dest_dir="$install_dir/build_api" --source_id="api"
+
+ynh_setup_source --dest_dir="$install_dir/build_proxy" --source_id="proxy"
+
 chown -R $app:www-data "$install_dir"
 
 #=================================================
 # INSTALL APP
 #=================================================
-ynh_script_progression --message="Building app..." --weight=5
+ynh_script_progression --message="Building UI..." --weight=5
 
 pushd $install_dir/build
-    ynh_exec_as $app $ynh_node_load_PATH $ynh_npm install pnpm
-    ynh_exec_as $app $ynh_node_load_PATH $ynh_npm exec -- pnpm install
-    ynh_exec_as $app $ynh_node_load_PATH $ynh_npm exec -- pnpm build
-    ./localizefonts.sh
+	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH corepack enable
+	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH corepack prepare pnpm@latest --activate
+	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH pnpm install
+	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH NODE_ENV=production pnpm build
+    ynh_exec_warn_less ynh_exec_as $app ./localizefonts.sh
 popd
 
 mv $install_dir/build/dist $install_dir
 chown -R $app:www-data "$install_dir/dist"
 chmod -R 755 "$install_dir/dist"
-#ynh_secure_remove --file="$install_dir/build"
+
+ynh_script_progression --message="Building API..." --weight=5
+
+pushd $install_dir/build_api
+    ynh_exec_warn_less ynh_exec_as $app ./gradlew shadowJar
+popd
+
+mv $install_dir/build_api/build/libs/piped-1.0-all.jar $install_dir/piped.jar
+
+pushd $install_dir/build_proxy
+    ynh_exec_warn_less ynh_exec_as $app cargo build --release
+popd
+
+mv $install_dir/build_proxy/target/release/piped-proxy $install_dir
 
 #=================================================
 # END OF SCRIPT

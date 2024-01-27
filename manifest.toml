@@ -31,6 +31,10 @@ ram.runtime = "50M"
     [install.domain]
     type = "domain"
 
+    [install.path]
+    type = "path"
+    default = "piped"
+
     [install.init_main_permission]
     type = "group"
     default = "visitors"
@@ -43,9 +47,26 @@ ram.runtime = "50M"
         sha256 = "64f56b0d0f02035ef42b561b617a793da2db96e02cb7a8131e2ac9e0c619101b"
         autoupdate.strategy = "latest_github_commit"
 
+        [resources.sources.api]
+        url = "https://github.com/TeamPiped/Piped-Backend/archive/c746794d7434d0cda99f8b586a431ef69e1fb7b5.tar.gz"
+        sha256 = "fdb53fbe599e7e91c0663f1b40f0ba49a967cdcd6048769d8ab840df73a80e0f"
+        autoupdate.strategy = "latest_github_commit"
+
+        [resources.sources.proxy]
+        url = "https://github.com/TeamPiped/piped-proxy/archive/0098582abeda2512790ca9d10cf016377cc71855.tar.gz"
+        sha256 = "436c0189e744bcd2ebe0b926dc58f2d740b4531ca43e620f0e8ff697c5d816c3"
+        autoupdate.strategy = "latest_github_commit"
+
+        [resources.sources.jdk]
+        url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.2%2B13/OpenJDK21U-jdk_x64_linux_hotspot_21.0.2_13.tar.gz"
+        sha256 = "454bebb2c9fe48d981341461ffb6bf1017c7b7c6e15c6b0c29b959194ba3aaa5"
+        
     [resources.system_user]
 
     [resources.install_dir]
 
     [resources.permissions]
     main.url = "/"
+
+    [resources.database]
+    type = "postgresql"
