@@ -18,8 +18,6 @@ ynh_use_nodejs
 
 ynh_setup_source --dest_dir="$install_dir/jdk" --source_id="jdk"
 
-export JAVA_HOME="$install_dir/jdk"
-
 ynh_exec_warn_less ynh_exec_as $app RUSTUP_HOME="$install_dir"/.rustup CARGO_HOME="$install_dir"/.cargo bash -c 'curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -q -y'
 export PATH="$install_dir/jdk/bin:$install_dir/.cargo/bin:$PATH"
 
@@ -58,10 +56,14 @@ chmod -R 755 "$install_dir/dist"
 ynh_script_progression --message="Building API..." --weight=5
 
 pushd $install_dir/build_api
-    ynh_exec_warn_less ynh_exec_as $app ./gradlew shadowJar
+    ynh_secure_remove --file="$install_dir/build_api/config.properties"
+    ynh_add_config --template="config.properties" --destination="$install_dir/build_api/config.properties"
+    ynh_exec_warn_less ynh_exec_as $app JAVA_HOME=$install_dir/jdk ./gradlew shadowJar
 popd
 
 mv $install_dir/build_api/build/libs/piped-1.0-all.jar $install_dir/piped.jar
+
+ynh_script_progression --message="Building Proxy..." --weight=5
 
 pushd $install_dir/build_proxy
     ynh_exec_warn_less ynh_exec_as $app cargo build --release
