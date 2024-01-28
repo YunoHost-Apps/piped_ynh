@@ -66,6 +66,13 @@ ynh_script_progression --message="Reloading NGINX web server and $app's service.
 ynh_systemd_action --service_name=nginx --action=reload
 
 #=================================================
+# START SYSTEMD SERVICE
+#=================================================
+ynh_systemd_action --service_name=$app-api --action="start" --log_path="/var/log/$app/$app-api.log" --line_match="HTTP Server is listening on"
+
+ynh_systemd_action --service_name=$app-proxy --action="start" --log_path="/var/log/$app/$app-proxy.log" --line_match="Running server!"
+
+#=================================================
 # END OF SCRIPT
 #=================================================
 
