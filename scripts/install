@@ -56,10 +56,17 @@ popd
 chown -R $app:www-data "$install_dir/dist"
 chmod -R 755 "$install_dir/dist"
 
+ynh_secure_remove --file="$install_dir/build"
+ynh_secure_remove --file="$install_dir/.npm"
+ynh_secure_remove --file="$install_dir/.local"
+ynh_secure_remove --file="$install_dir/.node"
+ynh_secure_remove --file="$install_dir/.cache"
+
 ynh_script_progression --message="Building API..." --weight=5
 
 pushd $install_dir/build_api
     ynh_exec_warn_less ynh_exec_as $app JAVA_HOME=$install_dir/jdk ./gradlew shadowJar
+    ynh_exec_warn_less ynh_exec_as $app JAVA_HOME=$install_dir/jdk ./gradlew --stop
 popd
 
 mv $install_dir/build_api/build/libs/piped-1.0-all.jar $install_dir/piped.jar
@@ -74,6 +81,7 @@ pushd $install_dir/build_proxy
 popd
 
 mv $install_dir/build_proxy/target/release/piped-proxy $install_dir
+ynh_secure_remove --file="$install_dir/.rustup"
 
 #=================================================
 # SYSTEM CONFIGURATION
