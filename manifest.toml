@@ -10,7 +10,7 @@ version = "2024.01.21~ynh1"
 maintainers = ["orhtej2"]
 
 [upstream]
-license = "GNU AFFERO GPL"
+license = "AGPL-3.0-or-later"
 website = "https://docs.piped.video/"
 demo = "https://piped.video/"
 admindoc = "https://docs.piped.video/docs/"
