@@ -70,3 +70,6 @@ ram.runtime = "50M"
 
     [resources.database]
     type = "postgresql"
+
+    [resources.ports]
+        [resources.ports.proxy]

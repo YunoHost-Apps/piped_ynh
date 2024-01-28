@@ -42,19 +42,16 @@ chown -R $app:www-data "$install_dir"
 ynh_script_progression --message="Building UI..." --weight=5
 
 pushd $install_dir/build
-	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH corepack enable
-	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH corepack prepare pnpm@latest --activate
-	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH pnpm install
-	ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH NODE_ENV=production pnpm build
+    ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH corepack enable
+    ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH corepack prepare pnpm@latest --activate
+    ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH pnpm install
+    ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH NODE_ENV=production pnpm build
     ynh_exec_warn_less ynh_exec_as $app ./localizefonts.sh
 popd
 
 mv $install_dir/build/dist $install_dir
 pushd $install_dir/dist
-    domainandpath="$domain\\$path"
-    domainandpath=${domainandpath%%+(/)}
-    domainpathapi="$domainandpath\\/api"
-    sed -i s/pipedapi.kavin.rocks/"$domainpathapi"/g assets/*
+    sed -i s/pipedapi.kavin.rocks/"$domain\/api"/g assets/*
 popd
 chown -R $app:www-data "$install_dir/dist"
 chmod -R 755 "$install_dir/dist"
@@ -62,12 +59,13 @@ chmod -R 755 "$install_dir/dist"
 ynh_script_progression --message="Building API..." --weight=5
 
 pushd $install_dir/build_api
-    ynh_secure_remove --file="$install_dir/build_api/config.properties"
-    ynh_add_config --template="config.properties" --destination="$install_dir/build_api/config.properties"
     ynh_exec_warn_less ynh_exec_as $app JAVA_HOME=$install_dir/jdk ./gradlew shadowJar
 popd
 
 mv $install_dir/build_api/build/libs/piped-1.0-all.jar $install_dir/piped.jar
+ynh_add_config --template="config.properties" --destination="$install_dir/config.properties"
+chown $app:$app "$install_dir/config.properties"
+chmod 600 "$install_dir/config.properties"
 
 ynh_script_progression --message="Building Proxy..." --weight=5
 
@@ -76,6 +74,41 @@ pushd $install_dir/build_proxy
 popd
 
 mv $install_dir/build_proxy/target/release/piped-proxy $install_dir
+
+#=================================================
+# SYSTEM CONFIGURATION
+#=================================================
+ynh_script_progression --message="Adding system configurations related to $app..." --weight=1
+
+ynh_add_nginx_config
+
+### systemd
+
+mkdir -p /var/log/$app
+touch /var/log/$app/$app-api.log
+touch /var/log/$app/$app-proxy.log
+chown -R $app: /var/log/$app
+
+ynh_use_logrotate --logfile="/var/log/$app/$app-api.log"
+ynh_use_logrotate --logfile="/var/log/$app/$app-proxy.log"
+
+ynh_add_systemd_config --template="api.service" --destination="/etc/systemd/system/piped-api.service"
+yunohost service add "$app-api" --description="Piped backend API service" --log="/var/log/$app/$app-api.log"
+
+ynh_add_systemd_config --template="proxy.service" --destination="/etc/systemd/system/piped-proxy.service"
+yunohost service add "$app-proxy" --description="Piped HTTP proxy service" --log="/var/log/$app/$app-proxy.log"
+
+#=================================================
+# GENERIC FINALIZATION
+#=================================================
+# START SYSTEMD SERVICE
+#=================================================
+ynh_script_progression --message="Starting a systemd service..." --weight=1
+
+# Start a systemd service
+ynh_systemd_action --service_name=$app-api --action="start" --log_path="/var/log/$app/$app-api.log" --line_match="HTTP Server is listening on"
+
+ynh_systemd_action --service_name=$app-proxy --action="start" --log_path="/var/log/$app/$app-proxy.log" --line_match="Running server!"
 
 #=================================================
 # END OF SCRIPT
