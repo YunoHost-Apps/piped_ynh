@@ -28,7 +28,7 @@ ynh_change_url_nginx_config
 #=================================================
 ynh_script_progression --message="Updating $app configuration..."
 
-sed -i s/"$old_domain"/"$new_domain"/g $install_dir/assets/*
+sed -i s/"$old_domain"/"$new_domain"/g $install_dir/dist/assets/*
 
 ynh_add_config --template="config.properties" --destination="$install_dir/config.properties"
 chown $app:$app "$install_dir/config.properties"
