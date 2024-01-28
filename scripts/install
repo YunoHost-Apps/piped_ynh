@@ -51,7 +51,7 @@ popd
 
 mv $install_dir/build/dist $install_dir
 pushd $install_dir/dist
-    sed -i s/pipedapi.kavin.rocks/"$domain\/api"/g assets/*
+    sed -i s/pipedapi.kavin.rocks/"$domain\\/api"/g assets/*
 popd
 chown -R $app:www-data "$install_dir/dist"
 chmod -R 755 "$install_dir/dist"
