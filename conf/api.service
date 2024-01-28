@@ -1,7 +1,7 @@
 [Unit]
-Description=Firefox Sync Storage server
+Description=Piped API service
 After=network.target
-After=mariadb.service
+After=postgresql.service
 
 [Service]
 Type=simple

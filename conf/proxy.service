@@ -1,7 +1,6 @@
 [Unit]
-Description=Firefox Sync Storage server
+Description=Piped HTTP proxy service
 After=network.target
-After=mariadb.service
 
 [Service]
 Type=simple
