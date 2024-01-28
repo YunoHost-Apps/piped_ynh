@@ -57,9 +57,7 @@ chown -R $app:www-data "$install_dir/dist"
 chmod -R 755 "$install_dir/dist"
 
 ynh_secure_remove --file="$install_dir/build"
-ynh_secure_remove --file="$install_dir/.npm"
 ynh_secure_remove --file="$install_dir/.local"
-ynh_secure_remove --file="$install_dir/.node"
 ynh_secure_remove --file="$install_dir/.cache"
 
 ynh_script_progression --message="Building API..." --weight=5
@@ -73,6 +71,8 @@ mv $install_dir/build_api/build/libs/piped-1.0-all.jar $install_dir/piped.jar
 ynh_add_config --template="config.properties" --destination="$install_dir/config.properties"
 chown $app:$app "$install_dir/config.properties"
 chmod 600 "$install_dir/config.properties"
+ynh_secure_remove --file="$install_dir/.gradle"
+ynh_secure_remove --file="$install_dir/build_api"
 
 ynh_script_progression --message="Building Proxy..." --weight=5
 
@@ -82,6 +82,8 @@ popd
 
 mv $install_dir/build_proxy/target/release/piped-proxy $install_dir
 ynh_secure_remove --file="$install_dir/.rustup"
+ynh_secure_remove --file="$install_dir/.cargo"
+ynh_secure_remove --file="$install_dir/build_proxy"
 
 #=================================================
 # SYSTEM CONFIGURATION
