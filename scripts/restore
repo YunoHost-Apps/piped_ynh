@@ -18,22 +18,48 @@ ynh_script_progression --message="Restoring the app main directory..." --weight=
 ynh_restore_file --origin_path="$install_dir"
 
 chown -R $app:www-data "$install_dir"
+chown $app:$app "$install_dir/config.properties"
+chmod 600 "$install_dir/config.properties"
 
 #=================================================
-# RESTORE THE MYSQL DATABASE
+# RESTORE THE POSTGRESQL DATABASE
 #=================================================
+ynh_script_progression --message="Restoring the PostgreSQL database..." --weight=3
+
+ynh_psql_execute_file_as_root --file="./db.sql" --database=$db_name
 
 #=================================================
 # RESTORE SYSTEM CONFIGURATIONS
 #=================================================
 ynh_script_progression --message="Restoring system configurations related to $app..." --weight=1
 
-# This should be a symetric version of what happens in the install script
-
 ynh_restore_file --origin_path="/etc/nginx/conf.d/$domain.d/$app.conf"
 
+ynh_restore_file --origin_path="/etc/systemd/system/$app-api.service"
+systemctl enable $app-api.service --quiet
+
+ynh_restore_file --origin_path="/etc/systemd/system/$app-proxy.service"
+systemctl enable $app-proxy.service --quiet
+
 #=================================================
-# RELOAD NGINX AND PHP-FPM OR THE APP SERVICE
+# RESTORE THE LOGROTATE CONFIGURATION
+#=================================================
+ynh_script_progression --message="Restoring the logrotate configuration..." --weight=1
+
+mkdir -p /var/log/$app
+chown -R $app:root /var/log/$app
+ynh_restore_file --origin_path="/etc/logrotate.d/$app"
+
+#=================================================
+# INTEGRATE SERVICE IN YUNOHOST
+#=================================================
+ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
+
+yunohost service add "$app-api" --description="Piped backend API service" --log="/var/log/$app/$app-api.log"
+yunohost service add "$app-proxy" --description="Piped HTTP proxy service" --log="/var/log/$app/$app-proxy.log"
+
+#=================================================
+# RELOAD NGINX THE APP SERVICE
 #=================================================
 ynh_script_progression --message="Reloading NGINX web server and $app's service..." --weight=1
 
