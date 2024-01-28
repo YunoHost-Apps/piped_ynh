@@ -92,10 +92,10 @@ chown -R $app: /var/log/$app
 ynh_use_logrotate --logfile="/var/log/$app/$app-api.log"
 ynh_use_logrotate --logfile="/var/log/$app/$app-proxy.log"
 
-ynh_add_systemd_config --template="api.service" --destination="/etc/systemd/system/piped-api.service"
+ynh_add_systemd_config --template="api.service" --service="$app-api"
 yunohost service add "$app-api" --description="Piped backend API service" --log="/var/log/$app/$app-api.log"
 
-ynh_add_systemd_config --template="proxy.service" --destination="/etc/systemd/system/piped-proxy.service"
+ynh_add_systemd_config --template="proxy.service" --service="$app-proxy"
 yunohost service add "$app-proxy" --description="Piped HTTP proxy service" --log="/var/log/$app/$app-proxy.log"
 
 #=================================================
