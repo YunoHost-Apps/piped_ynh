@@ -14,7 +14,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression --message="Stopping a systemd service..."
 
-ynh_systemd_action --service_name=$app --action="stop" --log_path="/var/log/$app/$app.log"
+ynh_systemd_action --service_name=$app-api --action="stop" --log_path="/var/log/$app/$app-api.log" --line_match="Shutdown completed"
 
 #=================================================
 # MODIFY URL IN NGINX CONF
@@ -26,15 +26,20 @@ ynh_change_url_nginx_config
 #=================================================
 # SPECIFIC MODIFICATIONS
 #=================================================
-# ...
-#=================================================
+ynh_script_progression --message="Updating $app configuration..."
+
+sed -i s/"$old_domain"/"$new_domain"/g $install_dir/dist/assets/*
+
+ynh_add_config --template="config.properties" --destination="$install_dir/config.properties"
+chown $app:$app "$install_dir/config.properties"
+chmod 600 "$install_dir/config.properties"
 
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
 ynh_script_progression --message="Starting a systemd service..."
 
-ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemd_action --service_name=$app-api --action="start" --log_path="/var/log/$app/$app-api.log" --line_match="HTTP Server is listening on"
 
 #=================================================
 # END OF SCRIPT
