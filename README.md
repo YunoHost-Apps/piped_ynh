@@ -65,6 +65,10 @@ By using Piped, you can freely watch and listen to content without the fear of p
 ![Screenshot of Piped](./doc/screenshots/channel.png)
 ![Screenshot of Piped](./doc/screenshots/player.png)
 
+## :red_circle: Antifeatures
+
+- **Non-free Network Services**: Promotes or depends entirely on a non-free network service.
+
 ## Documentation and resources
 
 * Official app website: <https://docs.piped.video/>

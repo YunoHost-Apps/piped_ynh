@@ -65,6 +65,10 @@ By using Piped, you can freely watch and listen to content without the fear of p
 ![Capture d’écran de Piped](./doc/screenshots/channel.png)
 ![Capture d’écran de Piped](./doc/screenshots/player.png)
 
+## :red_circle: Fonctions indésirables
+
+- **Non-free Network Services**: Promotes or depends entirely on a non-free network service.
+
 ## Documentations et ressources
 
 * Site officiel de l’app : <https://docs.piped.video/>
