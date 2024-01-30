@@ -47,11 +47,13 @@ ram.runtime = "50M"
         url = "https://github.com/TeamPiped/Piped-Backend/archive/c746794d7434d0cda99f8b586a431ef69e1fb7b5.tar.gz"
         sha256 = "fdb53fbe599e7e91c0663f1b40f0ba49a967cdcd6048769d8ab840df73a80e0f"
         autoupdate.strategy = "latest_github_commit"
+        autoupdate.upstream = "https://github.com/TeamPiped/Piped-Backend/"
 
         [resources.sources.proxy]
         url = "https://github.com/TeamPiped/piped-proxy/archive/0098582abeda2512790ca9d10cf016377cc71855.tar.gz"
         sha256 = "436c0189e744bcd2ebe0b926dc58f2d740b4531ca43e620f0e8ff697c5d816c3"
         autoupdate.strategy = "latest_github_commit"
+        autoupdate.upstream = "https://github.com/TeamPiped/piped-proxy/"
 
         [resources.sources.jdk]
         amd64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.2%2B13/OpenJDK21U-jdk_x64_linux_hotspot_21.0.2_13.tar.gz"
