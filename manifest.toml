@@ -1,3 +1,5 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
 packaging_format = 2
 
 id = "piped"
@@ -5,9 +7,9 @@ name = "Piped"
 
 description.en = "An open-source alternative frontend for YouTube which is efficient by design."
 
-version = "2024.02.05~ynh1"
+version = "2024.02.12~ynh1"
 
-maintainers = ["orhtej2"]
+maintainers = [ "orhtej2" ]
 
 [upstream]
 license = "AGPL-3.0-or-later"
@@ -19,7 +21,7 @@ code = "https://github.com/TeamPiped/Piped"
 
 [integration]
 yunohost = '>= 11.2'
-architectures = ["amd64", "arm64"]
+architectures = [ "amd64", "arm64" ]
 multi_instance = true
 ldap = false
 sso = false
@@ -39,19 +41,19 @@ ram.runtime = "50M"
 
     [resources.sources]
         [resources.sources.main]
-        url = "https://github.com/TeamPiped/Piped/archive/275fcfd5336ef8e7affd36e38eded5d0726cbd69.tar.gz"
-        sha256 = "389b83e568a9b804cb2a6cb2c179514d51d033f67c88c78f9f02bad314e6f144"
+        url = "https://github.com/TeamPiped/Piped/archive/8a9e447d1f460821a33ffb6dcc927b1a1359439f.tar.gz"
+        sha256 = "a168099fb6224789be8febd44346ebb0dbd5197445bffc41306a6786ab49ba10"
         autoupdate.strategy = "latest_github_commit"
 
         [resources.sources.api]
-        url = "https://github.com/TeamPiped/Piped-Backend/archive/a16e3b05276325af89e9183580b137027a61f687.tar.gz"
-        sha256 = "0d57d359f4422e0cd17a72d2648bb2224b1cbf6b1bfaaaa8d7241f4bc751fa52"
+        url = "https://github.com/TeamPiped/Piped-Backend/archive/32f8c9b6c48dfa3334a70ba42c2d687185d60390.tar.gz"
+        sha256 = "0c3042de1a097d777721c968c56ed9c1e9602b4b215b963b7411962507392db2"
         autoupdate.strategy = "latest_github_commit"
         autoupdate.upstream = "https://github.com/TeamPiped/Piped-Backend/"
 
         [resources.sources.proxy]
-        url = "https://github.com/TeamPiped/piped-proxy/archive/34e83cc2bffe261a999af45d5d78e813733837c6.tar.gz"
-        sha256 = "bcfc56d4f8ed6b87a6e452a3fb47a2c21958c88752304c2cb56467f52700e9bc"
+        url = "https://github.com/TeamPiped/piped-proxy/archive/28fd48b6a36b0b87f37ed7f5c444a18bf1cf3dd5.tar.gz"
+        sha256 = "21914109c86009bab43faabee19a7feedab77bf2ea8a2cab78d83134f455abaf"
         autoupdate.strategy = "latest_github_commit"
         autoupdate.upstream = "https://github.com/TeamPiped/piped-proxy/"
 
@@ -61,18 +63,18 @@ ram.runtime = "50M"
         arm64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.2%2B13/OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.2_13.tar.gz"
         arm64.sha256 = "3ce6a2b357e2ef45fd6b53d6587aa05bfec7771e7fb982f2c964f6b771b7526a"
 
-    [resources.system_user]
+[resources.system_user]
 
-    [resources.install_dir]
+[resources.install_dir]
 
-    [resources.permissions]
-    main.url = "/"
+[resources.permissions]
+main.url = "/"
 
-    [resources.apt]
-    packages = "postgresql"
+[resources.apt]
+packages = "postgresql"
 
-    [resources.database]
-    type = "postgresql"
+[resources.database]
+type = "postgresql"
 
-    [resources.ports]
-        [resources.ports.proxy]
+[resources.ports]
+    [resources.ports.proxy]
