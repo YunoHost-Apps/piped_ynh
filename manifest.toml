@@ -1,3 +1,5 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
 packaging_format = 2
 
 id = "piped"
@@ -7,7 +9,7 @@ description.en = "An open-source alternative frontend for YouTube which is effic
 
 version = "2024.02.12~ynh1"
 
-maintainers = ["orhtej2"]
+maintainers = [ "orhtej2" ]
 
 [upstream]
 license = "AGPL-3.0-or-later"
@@ -19,7 +21,7 @@ code = "https://github.com/TeamPiped/Piped"
 
 [integration]
 yunohost = '>= 11.2'
-architectures = ["amd64", "arm64"]
+architectures = [ "amd64", "arm64" ]
 multi_instance = true
 ldap = false
 sso = false
@@ -61,18 +63,18 @@ ram.runtime = "50M"
         arm64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.2%2B13/OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.2_13.tar.gz"
         arm64.sha256 = "3ce6a2b357e2ef45fd6b53d6587aa05bfec7771e7fb982f2c964f6b771b7526a"
 
-    [resources.system_user]
+[resources.system_user]
 
-    [resources.install_dir]
+[resources.install_dir]
 
-    [resources.permissions]
-    main.url = "/"
+[resources.permissions]
+main.url = "/"
 
-    [resources.apt]
-    packages = "postgresql"
+[resources.apt]
+packages = "postgresql"
 
-    [resources.database]
-    type = "postgresql"
+[resources.database]
+type = "postgresql"
 
-    [resources.ports]
-        [resources.ports.proxy]
+[resources.ports]
+    [resources.ports.proxy]
