@@ -17,6 +17,8 @@ upgrade_type=$(ynh_check_app_version_changed)
 # ENSURE DOWNWARD COMPATIBILITY
 #=================================================
 
+chmod 640 "/var/log/$app"
+
 #=================================================
 # STOP SYSTEMD SERVICE
 #=================================================

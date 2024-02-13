@@ -94,10 +94,11 @@ ynh_add_nginx_config
 
 ### systemd
 
-mkdir -p /var/log/$app
-touch /var/log/$app/$app-api.log
-touch /var/log/$app/$app-proxy.log
-chown -R $app: /var/log/$app
+mkdir -p "/var/log/$app"
+touch "/var/log/$app/$app-api.log"
+touch "/var/log/$app/$app-proxy.log"
+chown -R "$app:" "/var/log/$app"
+chmod 640 "/var/log/$app"
 
 ynh_use_logrotate --logfile="/var/log/$app/$app-api.log"
 ynh_use_logrotate --logfile="/var/log/$app/$app-proxy.log"
