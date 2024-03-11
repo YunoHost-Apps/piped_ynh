@@ -47,11 +47,11 @@ then
 
     ynh_script_progression --message="Setting up source files..."
 
-    ynh_setup_source --dest_dir="$install_dir/build"
+    ynh_setup_source --dest_dir="$install_dir/build" --full_replace=1
 
-    ynh_setup_source --dest_dir="$install_dir/build_api" --source_id="api"
+    ynh_setup_source --dest_dir="$install_dir/build_api" --source_id="api" --full_replace=1
 
-    ynh_setup_source --dest_dir="$install_dir/build_proxy" --source_id="proxy"
+    ynh_setup_source --dest_dir="$install_dir/build_proxy" --source_id="proxy" --full_replace=1
 
     chown -R $app:www-data "$install_dir"
     chmod -R 755 "$install_dir"
