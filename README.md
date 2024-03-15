@@ -55,7 +55,7 @@ By using Piped, you can freely watch and listen to content without the fear of p
 -   [x] Uses [NewPipeExtractor](https://github.com/TeamNewPipe/NewPipeExtractor) to extract information
 -   [x] Public [JSON API](https://docs.piped.video/docs/api-documentation/)
 -   [x] Federated protocol on Matrix to let instances collaborate with each other
-**Shipped version:** 2024.03.07~ynh1
+**Shipped version:** 2024.03.14~ynh1
 
 **Demo:** <https://piped.video/>
 
@@ -82,7 +82,7 @@ Please send your pull request to the [testing branch](https://github.com/YunoHos
 
 To try the testing branch, please proceed like that.
 
-``` bash
+```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/piped_ynh/tree/testing --debug
 or
 sudo yunohost app upgrade piped -u https://github.com/YunoHost-Apps/piped_ynh/tree/testing --debug
