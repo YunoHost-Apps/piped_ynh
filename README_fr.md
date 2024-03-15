@@ -55,7 +55,7 @@ By using Piped, you can freely watch and listen to content without the fear of p
 -   [x] Uses [NewPipeExtractor](https://github.com/TeamNewPipe/NewPipeExtractor) to extract information
 -   [x] Public [JSON API](https://docs.piped.video/docs/api-documentation/)
 -   [x] Federated protocol on Matrix to let instances collaborate with each other
-**Version incluse :** 2024.03.07~ynh1
+**Version incluse :** 2024.03.14~ynh1
 
 **Démo :** <https://piped.video/>
 
@@ -66,7 +66,7 @@ By using Piped, you can freely watch and listen to content without the fear of p
 
 ## :red_circle: Anti-fonctionnalités
 
-- **Non-free Network Services** : Promotes or depends entirely on a non-free network service.
+- **Services réseau non libres** : Promeut ou utilise des services réseau non libres.
 
 ## Documentations et ressources
 
@@ -82,7 +82,7 @@ Merci de faire vos pull request sur la [branche testing](https://github.com/Yuno
 
 Pour essayer la branche testing, procédez comme suit.
 
-``` bash
+```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/piped_ynh/tree/testing --debug
 ou
 sudo yunohost app upgrade piped -u https://github.com/YunoHost-Apps/piped_ynh/tree/testing --debug
