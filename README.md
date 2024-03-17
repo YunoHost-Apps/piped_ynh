@@ -55,7 +55,7 @@ By using Piped, you can freely watch and listen to content without the fear of p
 -   [x] Uses [NewPipeExtractor](https://github.com/TeamNewPipe/NewPipeExtractor) to extract information
 -   [x] Public [JSON API](https://docs.piped.video/docs/api-documentation/)
 -   [x] Federated protocol on Matrix to let instances collaborate with each other
-**Shipped version:** 2024.03.14~ynh1
+**Shipped version:** 2024.03.16~ynh1
 
 **Demo:** <https://piped.video/>
 
