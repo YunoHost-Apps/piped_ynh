@@ -69,9 +69,7 @@ ram.runtime = "50M"
 
     [resources.permissions]
     main.url = "/"
-    api.url = "/api"
-    api.auth_header = false
-    api.show_tile = false
+    main.auth_header = false
 
 [resources.apt]
 packages = "postgresql"
