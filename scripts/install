@@ -42,6 +42,8 @@ chown -R $app:www-data "$install_dir"
 ynh_script_progression --message="Building UI..." --weight=5
 
 pushd $install_dir/build
+    env $ynh_node_load_PATH corepack enable
+    env $ynh_node_load_PATH corepack prepare pnpm@latest --activate
     ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH corepack enable
     ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH corepack prepare pnpm@latest --activate
     ynh_exec_warn_less ynh_exec_as $app env $ynh_node_load_PATH pnpm install
