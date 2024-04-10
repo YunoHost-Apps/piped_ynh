@@ -1,20 +1,20 @@
 <!--
-Ohart ongi: README hau automatikoki sortu da <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>ri esker
-EZ editatu eskuz.
+NOTA: Este README foi creado automáticamente por <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
+NON debe editarse manualmente.
 -->
 
-# Piped YunoHost-erako
+# Piped para YunoHost
 
-[![Integrazio maila](https://dash.yunohost.org/integration/piped.svg)](https://dash.yunohost.org/appci/app/piped) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/piped.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/piped.maintain.svg)
+[![Nivel de integración](https://dash.yunohost.org/integration/piped.svg)](https://dash.yunohost.org/appci/app/piped) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/piped.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/piped.maintain.svg)
 
-[![Instalatu Piped YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=piped)
+[![Instalar Piped con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=piped)
 
-*[Irakurri README hau beste hizkuntzatan.](./ALL_README.md)*
+*[Le este README en outros idiomas.](./ALL_README.md)*
 
-> *Pakete honek Piped YunoHost zerbitzari batean azkar eta zailtasunik gabe instalatzea ahalbidetzen dizu.*  
-> *YunoHost ez baduzu, kontsultatu [gida](https://yunohost.org/install) nola instalatu ikasteko.*
+> *Este paquete permíteche instalar Piped de xeito rápido e doado nun servidor YunoHost.*  
+> *Se non usas YunoHost, le a [documentación](https://yunohost.org/install) para saber como instalalo.*
 
-## Aurreikuspena
+## Vista xeral
 
 # The Problem
 
@@ -56,37 +56,37 @@ By using Piped, you can freely watch and listen to content without the fear of p
 -   [x] Public [JSON API](https://docs.piped.video/docs/api-documentation/)
 -   [x] Federated protocol on Matrix to let instances collaborate with each other
 
-**Paketatutako bertsioa:** 2024.04.09~ynh1
+**Versión proporcionada:** 2024.04.09~ynh1
 
-**Demoa:** <https://piped.video/>
+**Demo:** <https://piped.video/>
 
-## Pantaila-argazkiak
+## Capturas de pantalla
 
-![Piped(r)en pantaila-argazkia](./doc/screenshots/channel.png)
-![Piped(r)en pantaila-argazkia](./doc/screenshots/player.png)
+![Captura de pantalla de Piped](./doc/screenshots/channel.png)
+![Captura de pantalla de Piped](./doc/screenshots/player.png)
 
-## :red_circle: Ezaugarri zalantzagarriak
+## :red_circle: Caraterísticas cuestionables
 
-- **Libreak ez diren sareko zerbitzuak**: Librea ez den sare-zerbitzu bat sustatzen du edo horren mende dago erabat.
+- **Non-free Network Services**: Promotes or depends entirely on a non-free network service.
 
-## Dokumentazioa eta baliabideak
+## Documentación e recursos
 
-- Aplikazioaren webgune ofiziala: <https://docs.piped.video/>
-- Administratzaileen dokumentazio ofiziala: <https://docs.piped.video/docs/>
-- Jatorrizko aplikazioaren kode-gordailua: <https://github.com/TeamPiped/Piped>
-- YunoHost Denda: <https://apps.yunohost.org/app/piped>
-- Eman errore baten berri: <https://github.com/YunoHost-Apps/piped_ynh/issues>
+- Web oficial da app: <https://docs.piped.video/>
+- Documentación oficial para admin: <https://docs.piped.video/docs/>
+- Repositorio de orixe do código: <https://github.com/TeamPiped/Piped>
+- Tenda YunoHost: <https://apps.yunohost.org/app/piped>
+- Informar dun problema: <https://github.com/YunoHost-Apps/piped_ynh/issues>
 
-## Garatzaileentzako informazioa
+## Info de desenvolvemento
 
-Bidali `pull request`a [`testing` abarrera](https://github.com/YunoHost-Apps/piped_ynh/tree/testing).
+Envía a túa colaboración á [rama `testing`](https://github.com/YunoHost-Apps/piped_ynh/tree/testing).
 
-`testing` abarra probatzeko, ondorengoa egin:
+Para probar a rama `testing`, procede deste xeito:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/piped_ynh/tree/testing --debug
-edo
+ou
 sudo yunohost app upgrade piped -u https://github.com/YunoHost-Apps/piped_ynh/tree/testing --debug
 ```
 
-**Informazio gehiago aplikazioaren paketatzeari buruz:** <https://yunohost.org/packaging_apps>
+**Máis info sobre o empaquetado da app:** <https://yunohost.org/packaging_apps>
