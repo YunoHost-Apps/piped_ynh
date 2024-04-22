@@ -7,7 +7,7 @@ name = "Piped"
 
 description.en = "An open-source alternative frontend for YouTube which is efficient by design."
 
-version = "2024.04.20~ynh1"
+version = "2024.04.22~ynh1"
 
 maintainers = [ "orhtej2" ]
 
@@ -41,8 +41,8 @@ ram.runtime = "50M"
 
     [resources.sources]
         [resources.sources.main]
-        url = "https://github.com/TeamPiped/Piped/archive/2b5f9784e1d5ee9b38d169d8cca98c2bec44f8fa.tar.gz"
-        sha256 = "091c6e39233bab32ade5df2a9fde2b24fc58004cc018d8184c362d7b412b32cc"
+        url = "https://github.com/TeamPiped/Piped/archive/4f82be943582197c6cd718a1dc03e5c19f9b51fc.tar.gz"
+        sha256 = "27b14bed7d079963e5be72240eb7473a5be0b2b3bdbf856bf382b1363f6b181f"
         autoupdate.strategy = "latest_github_commit"
 
         [resources.sources.api]
@@ -52,8 +52,8 @@ ram.runtime = "50M"
         autoupdate.upstream = "https://github.com/TeamPiped/Piped-Backend/"
 
         [resources.sources.proxy]
-        url = "https://github.com/TeamPiped/piped-proxy/archive/88a29fd2c010774fcaf2239ee7dbfdecc34ed8e4.tar.gz"
-        sha256 = "4639b549aea38fcbd618538e410ee64c3ecebef97aa1edcd62b419c12d9b123c"
+        url = "https://github.com/TeamPiped/piped-proxy/archive/6c83daa58e0c1b990cfd9fb58adfe40d2676502b.tar.gz"
+        sha256 = "b647259f9f4c527024f44f5bf8531e9979bd4fe48957773fcacc9860f500b5c6"
         autoupdate.strategy = "latest_github_commit"
         autoupdate.upstream = "https://github.com/TeamPiped/piped-proxy/"
 
