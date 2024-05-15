@@ -7,7 +7,7 @@ name = "Piped"
 
 description.en = "An open-source alternative frontend for YouTube which is efficient by design."
 
-version = "2024.05.13~ynh1"
+version = "2024.05.15~ynh1"
 
 maintainers = [ "orhtej2" ]
 
@@ -41,8 +41,8 @@ ram.runtime = "50M"
 
     [resources.sources]
         [resources.sources.main]
-        url = "https://github.com/TeamPiped/Piped/archive/aadcb467cdf40ee67dff5039b7a2a04b728a00e9.tar.gz"
-        sha256 = "7561a6349eab50541777a1ee25bf20446f9550324bbfdb91c5999d2aceb1ccae"
+        url = "https://github.com/TeamPiped/Piped/archive/e5e31aed5e0cbe6b4a075659189a9f7829c75b03.tar.gz"
+        sha256 = "7d2bdf9d0bcd3ba6a1e7f56883066c87a77f31e6bb733d357a53bc0d13da2b2c"
         autoupdate.strategy = "latest_github_commit"
 
         [resources.sources.api]
