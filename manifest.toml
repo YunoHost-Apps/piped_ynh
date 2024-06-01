@@ -52,8 +52,8 @@ ram.runtime = "50M"
         autoupdate.upstream = "https://github.com/TeamPiped/Piped-Backend/"
 
         [resources.sources.proxy]
-        url = "https://github.com/TeamPiped/piped-proxy/archive/f6b582487bab292ae14de0d92185426ad97a4c9c.tar.gz"
-        sha256 = "5939629210cb6728fd0672fdad4f7cd134571bd56d0812da321339e8b984f4e9"
+        url = "https://github.com/TeamPiped/piped-proxy/archive/aad4375921bca890b927f6d4c50dcebd0b65cc2d.tar.gz"
+        sha256 = "7e30aaf9244c3da00266fb5b45d163cfcd7a914b5f689041b1fe7c6134a81580"
         autoupdate.strategy = "latest_github_commit"
         autoupdate.upstream = "https://github.com/TeamPiped/piped-proxy/"
 
