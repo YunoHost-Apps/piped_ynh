@@ -56,7 +56,7 @@ By using Piped, you can freely watch and listen to content without the fear of p
 -   [x] Public [JSON API](https://docs.piped.video/docs/api-documentation/)
 -   [x] Federated protocol on Matrix to let instances collaborate with each other
 
-**Version incluse :** 2024.06.05~ynh1
+**Version incluse :** 2024.06.11~ynh1
 
 **Démo :** <https://piped.video/>
 
