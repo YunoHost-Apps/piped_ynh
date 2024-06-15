@@ -58,10 +58,15 @@ ram.runtime = "50M"
         autoupdate.upstream = "https://github.com/TeamPiped/piped-proxy/"
 
         [resources.sources.jdk]
-        amd64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.2%2B13/OpenJDK21U-jdk_x64_linux_hotspot_21.0.2_13.tar.gz"
-        amd64.sha256 = "454bebb2c9fe48d981341461ffb6bf1017c7b7c6e15c6b0c29b959194ba3aaa5"
-        arm64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.2%2B13/OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.2_13.tar.gz"
-        arm64.sha256 = "3ce6a2b357e2ef45fd6b53d6587aa05bfec7771e7fb982f2c964f6b771b7526a"
+        amd64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.3%2B9/OpenJDK21U-jdk_x64_linux_hotspot_21.0.3_9.tar.gz"
+        amd64.sha256 = "fffa52c22d797b715a962e6c8d11ec7d79b90dd819b5bc51d62137ea4b22a340"
+        arm64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.3%2B9/OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.3_9.tar.gz"
+        arm64.sha256 = "7d3ab0e8eba95bd682cfda8041c6cb6fa21e09d0d9131316fd7c96c78969de31"
+        autoupdate.strategy = "latest_github_release"
+        autoupdate.version_regex = "jdk-(\\d+\\.\\d+\\.\\d+)\\+(.*)"
+        autoupdate.upstream = "https://github.com/adoptium/temurin21-binaries"
+        autoupdate.asset.amd64 = "OpenJDK.*-jdk_x64_linux_hotspot_.*\\.tar\\.gz$"
+        autoupdate.asset.arm64 = "OpenJDK.*-jdk_aarch64_linux_hotspot_.*\\.tar\\.gz$"
 
 [resources.system_user]
 
