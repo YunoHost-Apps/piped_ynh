@@ -56,7 +56,7 @@ By using Piped, you can freely watch and listen to content without the fear of p
 -   [x] Public [JSON API](https://docs.piped.video/docs/api-documentation/)
 -   [x] Federated protocol on Matrix to let instances collaborate with each other
 
-**Versión actual:** 2024.06.14~ynh1
+**Versión actual:** 2024.06.21~ynh1
 
 **Demo:** <https://piped.video/>
 
@@ -65,7 +65,7 @@ By using Piped, you can freely watch and listen to content without the fear of p
 ![Captura de Piped](./doc/screenshots/channel.png)
 ![Captura de Piped](./doc/screenshots/player.png)
 
-## :red_circle: funcionalidades no deseadas
+## :red_circle: Características no deseables
 
 - **Non-free Network Services**: Promotes or depends entirely on a non-free network service.
 
