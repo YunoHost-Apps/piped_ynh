@@ -5,7 +5,7 @@
 
 # YunoHost 上的 Piped
 
-[![集成程度](https://dash.yunohost.org/integration/piped.svg)](https://dash.yunohost.org/appci/app/piped) ![工作状态](https://ci-apps.yunohost.org/ci/badges/piped.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/piped.maintain.svg)
+[![集成程度](https://dash.yunohost.org/integration/piped.svg)](https://ci-apps.yunohost.org/ci/apps/piped/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/piped.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/piped.maintain.svg)
 
 [![使用 YunoHost 安装 Piped](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=piped)
 
