@@ -5,7 +5,7 @@ NON debe editarse manualmente.
 
 # Piped para YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/piped.svg)](https://dash.yunohost.org/appci/app/piped) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/piped.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/piped.maintain.svg)
+[![Nivel de integración](https://dash.yunohost.org/integration/piped.svg)](https://ci-apps.yunohost.org/ci/apps/piped/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/piped.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/piped.maintain.svg)
 
 [![Instalar Piped con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=piped)
 

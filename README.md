@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # Piped for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/piped.svg)](https://dash.yunohost.org/appci/app/piped) ![Working status](https://ci-apps.yunohost.org/ci/badges/piped.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/piped.maintain.svg)
+[![Integration level](https://dash.yunohost.org/integration/piped.svg)](https://ci-apps.yunohost.org/ci/apps/piped/) ![Working status](https://ci-apps.yunohost.org/ci/badges/piped.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/piped.maintain.svg)
 
 [![Install Piped with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=piped)
 

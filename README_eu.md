@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # Piped YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/piped.svg)](https://dash.yunohost.org/appci/app/piped) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/piped.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/piped.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/piped.svg)](https://ci-apps.yunohost.org/ci/apps/piped/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/piped.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/piped.maintain.svg)
 
 [![Instalatu Piped YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=piped)
 
