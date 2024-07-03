@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # Piped YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/piped.svg)](https://dash.yunohost.org/appci/app/piped) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/piped.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/piped.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/piped.svg)](https://ci-apps.yunohost.org/ci/apps/piped/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/piped.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/piped.maintain.svg)
 
 [![Instalatu Piped YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=piped)
 
@@ -56,7 +56,7 @@ By using Piped, you can freely watch and listen to content without the fear of p
 -   [x] Public [JSON API](https://docs.piped.video/docs/api-documentation/)
 -   [x] Federated protocol on Matrix to let instances collaborate with each other
 
-**Paketatutako bertsioa:** 2024.06.21~ynh1
+**Paketatutako bertsioa:** 2024.06.29~ynh1
 
 **Demoa:** <https://piped.video/>
 
