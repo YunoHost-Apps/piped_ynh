@@ -1,20 +1,20 @@
 <!--
-NOTA: Este README foi creado automáticamente por <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
-NON debe editarse manualmente.
+N.B.: README ini dibuat secara otomatis oleh <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
+Ini TIDAK boleh diedit dengan tangan.
 -->
 
-# Piped para YunoHost
+# Piped untuk YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/piped.svg)](https://ci-apps.yunohost.org/ci/apps/piped/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/piped.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/piped.maintain.svg)
+[![Tingkat integrasi](https://dash.yunohost.org/integration/piped.svg)](https://ci-apps.yunohost.org/ci/apps/piped/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/piped.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/piped.maintain.svg)
 
-[![Instalar Piped con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=piped)
+[![Pasang Piped dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=piped)
 
-*[Le este README en outros idiomas.](./ALL_README.md)*
+*[Baca README ini dengan bahasa yang lain.](./ALL_README.md)*
 
-> *Este paquete permíteche instalar Piped de xeito rápido e doado nun servidor YunoHost.*  
-> *Se non usas YunoHost, le a [documentación](https://yunohost.org/install) para saber como instalalo.*
+> *Paket ini memperbolehkan Anda untuk memasang Piped secara cepat dan mudah pada server YunoHost.*  
+> *Bila Anda tidak mempunyai YunoHost, silakan berkonsultasi dengan [panduan](https://yunohost.org/install) untuk mempelajari bagaimana untuk memasangnya.*
 
-## Vista xeral
+## Ringkasan
 
 # The Problem
 
@@ -56,37 +56,37 @@ By using Piped, you can freely watch and listen to content without the fear of p
 -   [x] Public [JSON API](https://docs.piped.video/docs/api-documentation/)
 -   [x] Federated protocol on Matrix to let instances collaborate with each other
 
-**Versión proporcionada:** 2024.07.22~ynh1
+**Versi terkirim:** 2024.07.22~ynh1
 
 **Demo:** <https://piped.video/>
 
-## Capturas de pantalla
+## Tangkapan Layar
 
-![Captura de pantalla de Piped](./doc/screenshots/channel.png)
-![Captura de pantalla de Piped](./doc/screenshots/player.png)
+![Tangkapan Layar pada Piped](./doc/screenshots/channel.png)
+![Tangkapan Layar pada Piped](./doc/screenshots/player.png)
 
-## :red_circle: Debes considerar
+## :red_circle: Antifitur
 
 - **Non-free Network Services**: Promotes or depends entirely on a non-free network service.
 
-## Documentación e recursos
+## Dokumentasi dan sumber daya
 
-- Web oficial da app: <https://docs.piped.video/>
-- Documentación oficial para admin: <https://docs.piped.video/docs/>
-- Repositorio de orixe do código: <https://github.com/TeamPiped/Piped>
-- Tenda YunoHost: <https://apps.yunohost.org/app/piped>
-- Informar dun problema: <https://github.com/YunoHost-Apps/piped_ynh/issues>
+- Website aplikasi resmi: <https://docs.piped.video/>
+- Dokumentasi admin resmi: <https://docs.piped.video/docs/>
+- Repositori kode aplikasi hulu: <https://github.com/TeamPiped/Piped>
+- Gudang YunoHost: <https://apps.yunohost.org/app/piped>
+- Laporkan bug: <https://github.com/YunoHost-Apps/piped_ynh/issues>
 
-## Info de desenvolvemento
+## Info developer
 
-Envía a túa colaboración á [rama `testing`](https://github.com/YunoHost-Apps/piped_ynh/tree/testing).
+Silakan kirim pull request ke [`testing` branch](https://github.com/YunoHost-Apps/piped_ynh/tree/testing).
 
-Para probar a rama `testing`, procede deste xeito:
+Untuk mencoba branch `testing`, silakan dilanjutkan seperti:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/piped_ynh/tree/testing --debug
-ou
+atau
 sudo yunohost app upgrade piped -u https://github.com/YunoHost-Apps/piped_ynh/tree/testing --debug
 ```
 
-**Máis info sobre o empaquetado da app:** <https://yunohost.org/packaging_apps>
+**Info lebih lanjut mengenai pemaketan aplikasi:** <https://yunohost.org/packaging_apps>
