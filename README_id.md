@@ -56,7 +56,7 @@ By using Piped, you can freely watch and listen to content without the fear of p
 -   [x] Public [JSON API](https://docs.piped.video/docs/api-documentation/)
 -   [x] Federated protocol on Matrix to let instances collaborate with each other
 
-**Versi terkirim:** 2024.07.22~ynh1
+**Versi terkirim:** 2024.07.28~ynh1
 
 **Demo:** <https://piped.video/>
 
@@ -73,7 +73,7 @@ By using Piped, you can freely watch and listen to content without the fear of p
 
 - Website aplikasi resmi: <https://docs.piped.video/>
 - Dokumentasi admin resmi: <https://docs.piped.video/docs/>
-- Repositori kode aplikasi hulu: <https://github.com/TeamPiped/Piped>
+- Depot kode aplikasi hulu: <https://github.com/TeamPiped/Piped>
 - Gudang YunoHost: <https://apps.yunohost.org/app/piped>
 - Laporkan bug: <https://github.com/YunoHost-Apps/piped_ynh/issues>
 
