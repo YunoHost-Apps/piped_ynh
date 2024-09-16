@@ -56,7 +56,7 @@ By using Piped, you can freely watch and listen to content without the fear of p
 -   [x] Public [JSON API](https://docs.piped.video/docs/api-documentation/)
 -   [x] Federated protocol on Matrix to let instances collaborate with each other
 
-**Versión actual:** 2024.08.29~ynh2
+**Versión actual:** 2024.09.15~ynh1
 
 **Demo:** <https://piped.video/>
 
@@ -79,7 +79,7 @@ By using Piped, you can freely watch and listen to content without the fear of p
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/piped_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/piped_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 
