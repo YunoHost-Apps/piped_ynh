@@ -1,20 +1,20 @@
 <!--
-注意：此 README 由 <https://github.com/YunoHost/apps/tree/master/tools/readme_generator> 自动生成
-请勿手动编辑。
+NB: Deze README is automatisch gegenereerd door <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
+Hij mag NIET handmatig aangepast worden.
 -->
 
-# YunoHost 上的 Piped
+# Piped voor Yunohost
 
-[![集成程度](https://dash.yunohost.org/integration/piped.svg)](https://ci-apps.yunohost.org/ci/apps/piped/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/piped.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/piped.maintain.svg)
+[![Integratieniveau](https://dash.yunohost.org/integration/piped.svg)](https://ci-apps.yunohost.org/ci/apps/piped/) ![Mate van functioneren](https://ci-apps.yunohost.org/ci/badges/piped.status.svg) ![Onderhoudsstatus](https://ci-apps.yunohost.org/ci/badges/piped.maintain.svg)
 
-[![使用 YunoHost 安装 Piped](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=piped)
+[![Piped met Yunohost installeren](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=piped)
 
-*[阅读此 README 的其它语言版本。](./ALL_README.md)*
+*[Deze README in een andere taal lezen.](./ALL_README.md)*
 
-> *通过此软件包，您可以在 YunoHost 服务器上快速、简单地安装 Piped。*  
-> *如果您还没有 YunoHost，请参阅[指南](https://yunohost.org/install)了解如何安装它。*
+> *Met dit pakket kun je Piped snel en eenvoudig op een YunoHost-server installeren.*  
+> *Als je nog geen YunoHost hebt, lees dan [de installatiehandleiding](https://yunohost.org/install), om te zien hoe je 'm installeert.*
 
-## 概况
+## Overzicht
 
 # The Problem
 
@@ -56,37 +56,37 @@ By using Piped, you can freely watch and listen to content without the fear of p
 -   [x] Public [JSON API](https://docs.piped.video/docs/api-documentation/)
 -   [x] Federated protocol on Matrix to let instances collaborate with each other
 
-**分发版本：** 2024.09.15~ynh1
+**Geleverde versie:** 2024.09.15~ynh1
 
-**演示：** <https://piped.video/>
+**Demo:** <https://piped.video/>
 
-## 截图
+## Schermafdrukken
 
-![Piped 的截图](./doc/screenshots/channel.png)
-![Piped 的截图](./doc/screenshots/player.png)
+![Schermafdrukken van Piped](./doc/screenshots/channel.png)
+![Schermafdrukken van Piped](./doc/screenshots/player.png)
 
-## :red_circle: 负面特征
+## :red_circle: Anti-eigenschappen
 
 - **Non-free Network Services**: Promotes or depends entirely on a non-free network service.
 
-## 文档与资源
+## Documentatie en bronnen
 
-- 官方应用网站： <https://docs.piped.video/>
-- 官方管理文档： <https://docs.piped.video/docs/>
-- 上游应用代码库： <https://github.com/TeamPiped/Piped>
-- YunoHost 商店： <https://apps.yunohost.org/app/piped>
-- 报告 bug： <https://github.com/YunoHost-Apps/piped_ynh/issues>
+- Officiele website van de app: <https://docs.piped.video/>
+- Officiele beheerdersdocumentatie: <https://docs.piped.video/docs/>
+- Upstream app codedepot: <https://github.com/TeamPiped/Piped>
+- YunoHost-store: <https://apps.yunohost.org/app/piped>
+- Meld een bug: <https://github.com/YunoHost-Apps/piped_ynh/issues>
 
-## 开发者信息
+## Ontwikkelaarsinformatie
 
-请向 [`testing` 分支](https://github.com/YunoHost-Apps/piped_ynh/tree/testing) 发送拉取请求。
+Stuur je pull request alsjeblieft naar de [`testing`-branch](https://github.com/YunoHost-Apps/piped_ynh/tree/testing).
 
-如要尝试 `testing` 分支，请这样操作：
+Om de `testing`-branch uit te proberen, ga als volgt te werk:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/piped_ynh/tree/testing --debug
-或
+of
 sudo yunohost app upgrade piped -u https://github.com/YunoHost-Apps/piped_ynh/tree/testing --debug
 ```
 
-**有关应用打包的更多信息：** <https://yunohost.org/packaging_apps>
+**Verdere informatie over app-packaging:** <https://yunohost.org/packaging_apps>
