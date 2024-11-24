@@ -1,22 +1,22 @@
 <!--
-NOTA: Este README foi creado automáticamente por <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
-NON debe editarse manualmente.
+To README zostało automatycznie wygenerowane przez <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
+Nie powinno być ono edytowane ręcznie.
 -->
 
-# Piped para YunoHost
+# Piped dla YunoHost
 
-[![Nivel de integración](https://apps.yunohost.org/badge/integration/piped)](https://ci-apps.yunohost.org/ci/apps/piped/)
-![Estado de funcionamento](https://apps.yunohost.org/badge/state/piped)
-![Estado de mantemento](https://apps.yunohost.org/badge/maintained/piped)
+[![Poziom integracji](https://apps.yunohost.org/badge/integration/piped)](https://ci-apps.yunohost.org/ci/apps/piped/)
+![Status działania](https://apps.yunohost.org/badge/state/piped)
+![Status utrzymania](https://apps.yunohost.org/badge/maintained/piped)
 
-[![Instalar Piped con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=piped)
+[![Zainstaluj Piped z YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=piped)
 
-*[Le este README en outros idiomas.](./ALL_README.md)*
+*[Przeczytaj plik README w innym języku.](./ALL_README.md)*
 
-> *Este paquete permíteche instalar Piped de xeito rápido e doado nun servidor YunoHost.*  
-> *Se non usas YunoHost, le a [documentación](https://yunohost.org/install) para saber como instalalo.*
+> *Ta aplikacja pozwala na szybką i prostą instalację Piped na serwerze YunoHost.*  
+> *Jeżeli nie masz YunoHost zapoznaj się z [poradnikiem](https://yunohost.org/install) instalacji.*
 
-## Vista xeral
+## Przegląd
 
 # The Problem
 
@@ -58,37 +58,37 @@ By using Piped, you can freely watch and listen to content without the fear of p
 -   [x] Public [JSON API](https://docs.piped.video/docs/api-documentation/)
 -   [x] Federated protocol on Matrix to let instances collaborate with each other
 
-**Versión proporcionada:** 2024.11.21~ynh1
+**Dostarczona wersja:** 2024.11.21~ynh1
 
 **Demo:** <https://piped.video/>
 
-## Capturas de pantalla
+## Zrzuty ekranu
 
-![Captura de pantalla de Piped](./doc/screenshots/channel.png)
-![Captura de pantalla de Piped](./doc/screenshots/player.png)
+![Zrzut ekranu z Piped](./doc/screenshots/channel.png)
+![Zrzut ekranu z Piped](./doc/screenshots/player.png)
 
-## :red_circle: Debes considerar
+## :red_circle: Niepożądane funkcje
 
 - **Non-free Network Services**: Promotes or depends entirely on a non-free network service.
 
-## Documentación e recursos
+## Dokumentacja i zasoby
 
-- Web oficial da app: <https://docs.piped.video/>
-- Documentación oficial para admin: <https://docs.piped.video/docs/>
-- Repositorio de orixe do código: <https://github.com/TeamPiped/Piped>
-- Tenda YunoHost: <https://apps.yunohost.org/app/piped>
-- Informar dun problema: <https://github.com/YunoHost-Apps/piped_ynh/issues>
+- Oficjalna strona aplikacji: <https://docs.piped.video/>
+- Oficjalna dokumentacja dla administratora: <https://docs.piped.video/docs/>
+- Repozytorium z kodem źródłowym: <https://github.com/TeamPiped/Piped>
+- Sklep YunoHost: <https://apps.yunohost.org/app/piped>
+- Zgłaszanie błędów: <https://github.com/YunoHost-Apps/piped_ynh/issues>
 
-## Info de desenvolvemento
+## Informacje od twórców
 
-Envía a túa colaboración á [rama `testing`](https://github.com/YunoHost-Apps/piped_ynh/tree/testing).
+Wyślij swój pull request do [gałęzi `testing`](https://github.com/YunoHost-Apps/piped_ynh/tree/testing).
 
-Para probar a rama `testing`, procede deste xeito:
+Aby wypróbować gałąź `testing` postępuj zgodnie z instrukcjami:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/piped_ynh/tree/testing --debug
-ou
+lub
 sudo yunohost app upgrade piped -u https://github.com/YunoHost-Apps/piped_ynh/tree/testing --debug
 ```
 
-**Máis info sobre o empaquetado da app:** <https://yunohost.org/packaging_apps>
+**Więcej informacji o tworzeniu paczek aplikacji:** <https://yunohost.org/packaging_apps>
