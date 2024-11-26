@@ -5,7 +5,9 @@ Hij mag NIET handmatig aangepast worden.
 
 # Piped voor Yunohost
 
-[![Integratieniveau](https://dash.yunohost.org/integration/piped.svg)](https://ci-apps.yunohost.org/ci/apps/piped/) ![Mate van functioneren](https://ci-apps.yunohost.org/ci/badges/piped.status.svg) ![Onderhoudsstatus](https://ci-apps.yunohost.org/ci/badges/piped.maintain.svg)
+[![Integratieniveau](https://apps.yunohost.org/badge/integration/piped)](https://ci-apps.yunohost.org/ci/apps/piped/)
+![Mate van functioneren](https://apps.yunohost.org/badge/state/piped)
+![Onderhoudsstatus](https://apps.yunohost.org/badge/maintained/piped)
 
 [![Piped met Yunohost installeren](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=piped)
 
@@ -56,7 +58,7 @@ By using Piped, you can freely watch and listen to content without the fear of p
 -   [x] Public [JSON API](https://docs.piped.video/docs/api-documentation/)
 -   [x] Federated protocol on Matrix to let instances collaborate with each other
 
-**Geleverde versie:** 2024.11.17~ynh1
+**Geleverde versie:** 2024.11.21~ynh1
 
 **Demo:** <https://piped.video/>
 
