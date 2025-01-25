@@ -7,7 +7,7 @@ name = "Piped"
 
 description.en = "An open-source alternative frontend for YouTube which is efficient by design."
 
-version = "2025.01.12~ynh1"
+version = "2025.01.17~ynh2"
 
 maintainers = [ "orhtej2" ]
 
@@ -41,8 +41,8 @@ ram.runtime = "50M"
 
     [resources.sources]
         [resources.sources.main]
-        url = "https://github.com/TeamPiped/Piped/archive/a82a2f36655aae1cb721ceef8095efa6b747ab9b.tar.gz"
-        sha256 = "7ae4808563f4bc4befb1ebb2154c13d4c15b54cf27ec98d9fda6e0dba964c9b4"
+        url = "https://github.com/TeamPiped/Piped/archive/099ad7dfcf3284ec2cd49a8191ad2cc889461a54.tar.gz"
+        sha256 = "5a32e14f5c4b5ec5d77c0066ed647d4036d4aa0ea97e5410966e56cd8918d80f"
         autoupdate.strategy = "latest_github_commit"
 
         [resources.sources.api]
@@ -52,16 +52,16 @@ ram.runtime = "50M"
         autoupdate.upstream = "https://github.com/TeamPiped/Piped-Backend/"
 
         [resources.sources.proxy]
-        url = "https://github.com/TeamPiped/piped-proxy/archive/c911eaa78dc12b5c795cf4ce95f36bdd859f3218.tar.gz"
-        sha256 = "bff297f849fa61a17efed2574bc6101caee61049fa5918035d2d0c6adb894e16"
+        url = "https://github.com/TeamPiped/piped-proxy/archive/2c0ab71e580e1e6ec5561519c8b788f56ae14c01.tar.gz"
+        sha256 = "d3669b76d4c2afbb63a12d4122cb30943f5a067d07b1d6039201330c8b0772b0"
         autoupdate.strategy = "latest_github_commit"
         autoupdate.upstream = "https://github.com/TeamPiped/piped-proxy/"
 
         [resources.sources.jdk]
-        amd64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.5%2B11/OpenJDK21U-jdk_x64_linux_hotspot_21.0.5_11.tar.gz"
-        amd64.sha256 = "3c654d98404c073b8a7e66bffb27f4ae3e7ede47d13284c132d40a83144bfd8c"
-        arm64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.5%2B11/OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.5_11.tar.gz"
-        arm64.sha256 = "6482639ed9fd22aa2e704cc366848b1b3e1586d2bf1213869c43e80bca58fe5c"
+        amd64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.6%2B7/OpenJDK21U-jdk_x64_linux_hotspot_21.0.6_7.tar.gz"
+        amd64.sha256 = "a2650fba422283fbed20d936ce5d2a52906a5414ec17b2f7676dddb87201dbae"
+        arm64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.6%2B7/OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.6_7.tar.gz"
+        arm64.sha256 = "04fe1273f624187d927f1b466e8cdb630d70786db07bee7599bfa5153060afd3"
         autoupdate.strategy = "latest_github_release"
         autoupdate.version_regex = "jdk-(\\d+\\.\\d+\\.\\d+)\\+(.*)"
         autoupdate.upstream = "https://github.com/adoptium/temurin21-binaries"
