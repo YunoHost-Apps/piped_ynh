@@ -7,7 +7,7 @@ name = "Piped"
 
 description.en = "An open-source alternative frontend for YouTube which is efficient by design."
 
-version = "2025.01.26~ynh1"
+version = "2025.02.01~ynh1"
 
 maintainers = [ "orhtej2" ]
 
@@ -41,8 +41,8 @@ ram.runtime = "50M"
 
     [resources.sources]
         [resources.sources.main]
-        url = "https://github.com/TeamPiped/Piped/archive/19c5744d76291ae7b67ebd082af38ecbf6489b13.tar.gz"
-        sha256 = "c8907dac94475f2dcf315700be4b7a0bf9093df073bebca8cf0f74b6a52321be"
+        url = "https://github.com/TeamPiped/Piped/archive/c1a12738390702bef9eeb526b227daefff2c5f09.tar.gz"
+        sha256 = "c788aae1c34eb8908f4ee11c20418a70e475b53645aa191c1891f8373ab98383"
         autoupdate.strategy = "latest_github_commit"
 
         [resources.sources.api]
@@ -77,7 +77,7 @@ ram.runtime = "50M"
     main.auth_header = false
 
 [resources.apt]
-packages = "postgresql"
+packages = "postgresql, build-essential"
 
 [resources.database]
 type = "postgresql"
