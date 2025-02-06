@@ -77,7 +77,7 @@ ram.runtime = "50M"
     main.auth_header = false
 
 [resources.apt]
-packages = "postgresql"
+packages = "postgresql, build-essential"
 
 [resources.database]
 type = "postgresql"
