@@ -3,7 +3,7 @@ Este archivo README esta generado automaticamente<https://github.com/YunoHost/ap
 No se debe editar a mano.
 -->
 
-# Piped para Yunohost
+# Piped para YunoHost
 
 [![Nivel de integración](https://apps.yunohost.org/badge/integration/piped)](https://ci-apps.yunohost.org/ci/apps/piped/)
 ![Estado funcional](https://apps.yunohost.org/badge/state/piped)
@@ -58,7 +58,7 @@ By using Piped, you can freely watch and listen to content without the fear of p
 -   [x] Public [JSON API](https://docs.piped.video/docs/api-documentation/)
 -   [x] Federated protocol on Matrix to let instances collaborate with each other
 
-**Versión actual:** 2025.03.21~ynh1
+**Versión actual:** 2025.03.30~ynh1
 
 **Demo:** <https://piped.video/>
 
