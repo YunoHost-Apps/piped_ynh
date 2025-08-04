@@ -79,7 +79,7 @@ group = "www-data:r-x"
     main.auth_header = false
 
 [resources.apt]
-packages = "postgresql, build-essential"
+packages = "postgresql, build-essential, libclang-dev"
 
 [resources.database]
 type = "postgresql"
