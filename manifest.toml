@@ -7,7 +7,7 @@ name = "Piped"
 
 description.en = "An open-source alternative frontend for YouTube which is efficient by design."
 
-version = "2025.07.10~ynh4"
+version = "2025.08.03~ynh1"
 
 maintainers = [ "orhtej2" ]
 
@@ -42,8 +42,8 @@ ram.runtime = "50M"
 
     [resources.sources]
         [resources.sources.main]
-        url = "https://github.com/TeamPiped/Piped/archive/b08476e60723425f5d2d4f7951e7e6d99b1ca690.tar.gz"
-        sha256 = "38a9a96598bc99eb6b9d1408cb80315607ecef8554309c2ad4cf87cdcdb39bd4"
+        url = "https://github.com/TeamPiped/Piped/archive/7b80e293c4a52e04e2325a0d2ddf9c7bc3563b63.tar.gz"
+        sha256 = "de67f90f06fdd34b1739853fc68b4627db31e591263b08b66707902ff96a7ffa"
         autoupdate.strategy = "latest_github_commit"
 
         [resources.sources.api]
@@ -53,8 +53,8 @@ ram.runtime = "50M"
         autoupdate.upstream = "https://github.com/TeamPiped/Piped-Backend/"
 
         [resources.sources.proxy]
-        url = "https://github.com/TeamPiped/piped-proxy/archive/2f93190deb99ca31bf9f3b5178c0a1015b1fbb86.tar.gz"
-        sha256 = "46c6da892792f1f20a11dac4914152bb9d004d330d46a0013b10263758c41478"
+        url = "https://github.com/TeamPiped/piped-proxy/archive/0cc8c871e4428764721d86643b0192ccf8a0d62b.tar.gz"
+        sha256 = "8725ae8324c5a7592ca77be46177047882dc7513a7827e5e4fc2c461c1aea52d"
         autoupdate.strategy = "latest_github_commit"
         autoupdate.upstream = "https://github.com/TeamPiped/piped-proxy/"
 
@@ -79,7 +79,7 @@ group = "www-data:r-x"
     main.auth_header = false
 
 [resources.apt]
-packages = "postgresql, build-essential"
+packages = "postgresql, build-essential, libclang-dev"
 
 [resources.database]
 type = "postgresql"
