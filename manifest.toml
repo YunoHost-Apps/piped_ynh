@@ -7,7 +7,7 @@ name = "Piped"
 
 description.en = "An open-source alternative frontend for YouTube which is efficient by design."
 
-version = "2025.06.22~ynh1"
+version = "2025.08.05~ynh1"
 
 maintainers = [ "orhtej2" ]
 
@@ -42,27 +42,27 @@ ram.runtime = "50M"
 
     [resources.sources]
         [resources.sources.main]
-        url = "https://github.com/TeamPiped/Piped/archive/13ea181c62df50632a437dbafd3cc7dbccee8f50.tar.gz"
-        sha256 = "43306baba2f622e6e71390a89dc63d14679d7e4ba2bb05f958b4ef026d94ad3d"
+        url = "https://github.com/TeamPiped/Piped/archive/c30c6c32268df100c1435bb8f1691823e805dfdf.tar.gz"
+        sha256 = "0bb3c6e1d965cd3cf87591bfb56d083cf41cce21fb434472206c7061c3234c19"
         autoupdate.strategy = "latest_github_commit"
 
         [resources.sources.api]
-        url = "https://github.com/TeamPiped/Piped-Backend/archive/3ee9dcf38f4d0471c25d5c84ba6965760910200c.tar.gz"
-        sha256 = "40e61d5020978f8dbb137ff12008c37eb7734d93accf8a6d7cf18e30bddeec04"
+        url = "https://github.com/TeamPiped/Piped-Backend/archive/d149f88f1208934a21d0590bbabba25e4e50e448.tar.gz"
+        sha256 = "0191936e3abe1fe3b9ee4309e8d63cd3ea2d6179d549a41917f5d1dba6c721ab"
         autoupdate.strategy = "latest_github_commit"
         autoupdate.upstream = "https://github.com/TeamPiped/Piped-Backend/"
 
         [resources.sources.proxy]
-        url = "https://github.com/TeamPiped/piped-proxy/archive/9bccd36491cffe16c2e4d4763ab3d5568a9569e5.tar.gz"
-        sha256 = "d47446111b0bae51f88d2725077351bef4568c9e7394fe7d241a19707c8f7e36"
+        url = "https://github.com/TeamPiped/piped-proxy/archive/0e2f9d76273e29385fd009bf5bdedcf035b45d5f.tar.gz"
+        sha256 = "a6ae0706c8d877eb4bb4689b4e8ea8abc3153f8bc37a461e84dbde9ebece5130"
         autoupdate.strategy = "latest_github_commit"
         autoupdate.upstream = "https://github.com/TeamPiped/piped-proxy/"
 
         [resources.sources.jdk]
-        amd64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.7%2B6/OpenJDK21U-jdk_x64_linux_hotspot_21.0.7_6.tar.gz"
-        amd64.sha256 = "974d3acef0b7193f541acb61b76e81670890551366625d4f6ca01b91ac152ce0"
-        arm64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.7%2B6/OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.7_6.tar.gz"
-        arm64.sha256 = "31dba70ba928c78c20d62049ac000f79f7a7ab11f9d9c11e703f52d60aa64f93"
+        amd64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.8%2B9/OpenJDK21U-jdk_x64_linux_hotspot_21.0.8_9.tar.gz"
+        amd64.sha256 = "f2dc5418092c43003db8f9005c4a286e1c0104fea96ccdd49e8ebd037cac9219"
+        arm64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.8%2B9/OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.8_9.tar.gz"
+        arm64.sha256 = "e5c41a1ab0865ea5de9b4529bf8526005f1d4593090845387d14fe450ce39c33"
         autoupdate.strategy = "latest_github_release"
         autoupdate.version_regex = "jdk-(\\d+\\.\\d+\\.\\d+)\\+(.*)"
         autoupdate.upstream = "https://github.com/adoptium/temurin21-binaries"
@@ -79,7 +79,7 @@ group = "www-data:r-x"
     main.auth_header = false
 
 [resources.apt]
-packages = "postgresql, build-essential"
+packages = "postgresql, build-essential, libclang-dev"
 
 [resources.database]
 type = "postgresql"
