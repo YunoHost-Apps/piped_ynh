@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source _common.sh
+
 source /usr/share/yunohost/helpers
 
 
@@ -19,7 +19,7 @@ ynh_systemctl --service=$app-proxy --action="stop"
 #=================================================
 ynh_script_progression "Installing dependencies..."
 
-ynh_nodejs_install
+#REMOVEME? ynh_nodejs_install
 
 ynh_setup_source --dest_dir="$install_dir/jdk" --source_id="jdk"
 
