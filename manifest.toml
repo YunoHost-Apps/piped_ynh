@@ -86,3 +86,6 @@ type = "postgresql"
 
 [resources.ports]
     [resources.ports.proxy]
+
+    [resources.nodejs]
+    version = "20"
