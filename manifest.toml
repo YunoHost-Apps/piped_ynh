@@ -6,7 +6,7 @@ id = "piped"
 name = "Piped"
 
 description.en = "Alternative front-end for YouTube"
-description.en = "Interface alternative pour YouTube"
+description.fr = "Interface alternative pour YouTube"
 
 version = "2025.10.02~ynh1"
 
