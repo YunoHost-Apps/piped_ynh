@@ -8,7 +8,7 @@ It shall NOT be edited by hand.
   Piped, packaged for YunoHost
 </h1>
 
-An open-source alternative frontend for YouTube which is efficient by design.
+Alternative front-end for YouTube
 
 [![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://docs.piped.video/)
 [![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://piped.video/)
