@@ -12,6 +12,14 @@ diff --git a/build.gradle b/build.gradle
 index 8be853a3..22d33fbc 100644
 --- a/build.gradle
 +++ b/build.gradle
+@@ -5,6 +5,7 @@ plugins {
+ }
+
+ repositories {
++    mavenLocal()
+     mavenCentral()
+     maven { url 'https://jitpack.io' }
+ }
 @@ -16,8 +16,8 @@ dependencies {
      implementation 'it.unimi.dsi:fastutil-core:8.5.16'
      implementation 'commons-codec:commons-codec:1.19.0'
