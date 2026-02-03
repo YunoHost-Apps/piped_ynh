@@ -84,7 +84,7 @@ mv $install_dir/build_api/build/libs/piped-1.0-all.jar $install_dir/piped.jar
 ynh_safe_rm "$install_dir/.gradle"
 ynh_safe_rm "$install_dir/.m2"
 ynh_safe_rm "$install_dir/build_api"
-ynh_safe_rm "$install_dir/npe
+ynh_safe_rm "$install_dir/npe"
 
 ynh_script_progression "Building Proxy..."
 
