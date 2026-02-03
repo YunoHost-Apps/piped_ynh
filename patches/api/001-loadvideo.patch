@@ -1,0 +1,25 @@
+From 0991061a9b92430ba6965fa5f2d744eceb7586c0 Mon Sep 17 00:00:00 2001
+From: ac615223s5 <ppu7haxj@duck.com>
+Date: Thu, 29 Jan 2026 00:12:39 -0500
+Subject: [PATCH] fix https://github.com/TeamPiped/Piped/issues/4139
+
+Update build.gradle
+---
+ build.gradle | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/build.gradle b/build.gradle
+index 8be853a3..22d33fbc 100644
+--- a/build.gradle
++++ b/build.gradle
+@@ -16,8 +16,8 @@ dependencies {
+     implementation 'it.unimi.dsi:fastutil-core:8.5.16'
+     implementation 'commons-codec:commons-codec:1.19.0'
+     implementation 'org.bouncycastle:bcprov-jdk18on:1.81'
+-    implementation 'com.github.TeamNewPipe:NewPipeExtractor:v0.24.6'
+-    implementation 'com.github.TeamNewPipe:nanojson:1d9e1aea9049fc9f85e68b43ba39fe7be1c1f751'
++    implementation 'com.github.TeamNewPipe:NewPipeExtractor:v0.25.1'
++    implementation 'com.github.TeamNewPipe:nanojson:c7a6c1c08d16b6d5ecded34758e6415e07be2166'
+     implementation 'com.fasterxml.jackson.core:jackson-core:2.19.2'
+     implementation 'com.fasterxml.jackson.core:jackson-annotations:2.19.2'
+     implementation 'com.fasterxml.jackson.core:jackson-databind:2.19.2'
