@@ -1,0 +1,32 @@
+From 0991061a9b92430ba6965fa5f2d744eceb7586c0 Mon Sep 17 00:00:00 2001
+From: ac615223s5 <ppu7haxj@duck.com>
+Date: Thu, 29 Jan 2026 00:12:39 -0500
+Subject: [PATCH] fix https://github.com/TeamPiped/Piped/issues/4139
+
+Update build.gradle
+---
+ build.gradle | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/build.gradle b/build.gradle
+index 8be853a3..22d33fbc 100644
+--- a/build.gradle
++++ b/build.gradle
+@@ -5,6 +5,7 @@ plugins {
+ }
+
+ repositories {
++    mavenLocal()
+     mavenCentral()
+     maven { url 'https://jitpack.io' }
+ }
+@@ -16,8 +16,8 @@ dependencies {
+     implementation 'it.unimi.dsi:fastutil-core:8.5.16'
+     implementation 'commons-codec:commons-codec:1.19.0'
+     implementation 'org.bouncycastle:bcprov-jdk18on:1.81'
+-    implementation 'com.github.FireMasterK:NewPipeExtractor:92809cedefd89ce68bc4de8763e9d5f2760f5899'
++    implementation 'net.newpipe:extractor:v0.25.0'
+     implementation 'com.github.FireMasterK:nanojson:a507525e549a836c3a8b6ab7090dca38e92942ef'
+     implementation 'com.fasterxml.jackson.core:jackson-core:2.19.2'
+     implementation 'com.fasterxml.jackson.core:jackson-annotations:2.19.2'
+     implementation 'com.fasterxml.jackson.core:jackson-databind:2.19.2'
