@@ -35,6 +35,8 @@ ynh_setup_source --dest_dir="$install_dir/build"
 
 ynh_setup_source --dest_dir="$install_dir/build_api" --source_id="api"
 
+ynh_setup_source --dest_dir="$install_dir/npe" --source_id="npe"
+
 ynh_setup_source --dest_dir="$install_dir/build_proxy" --source_id="proxy"
 
 chown -R $app:www-data "$install_dir"
@@ -67,6 +69,11 @@ ynh_safe_rm "$install_dir/.cache"
 
 ynh_script_progression "Building API..."
 
+pushd $install_dir/npe
+    ynh_hide_warnings ynh_exec_as_app JAVA_HOME=$install_dir/jdk ./gradlew publishToMavenLocal
+    ynh_hide_warnings ynh_exec_as_app JAVA_HOME=$install_dir/jdk ./gradlew --stop
+popd
+
 pushd $install_dir/build_api
     ynh_hide_warnings ynh_exec_as_app JAVA_HOME=$install_dir/jdk ./gradlew shadowJar
     ynh_hide_warnings ynh_exec_as_app JAVA_HOME=$install_dir/jdk ./gradlew --stop
@@ -74,8 +81,10 @@ popd
 
 ynh_safe_rm "$install_dir/piped.jar"
 mv $install_dir/build_api/build/libs/piped-1.0-all.jar $install_dir/piped.jar
-ynh_safe_rm "$install_dir/build_api/"
 ynh_safe_rm "$install_dir/.gradle"
+ynh_safe_rm "$install_dir/.m2"
+ynh_safe_rm "$install_dir/build_api"
+ynh_safe_rm "$install_dir/npe"
 
 ynh_script_progression "Building Proxy..."
 

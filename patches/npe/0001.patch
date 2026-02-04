@@ -1,0 +1,73 @@
+commit 0615760ca30a977992314e635db72cc17f726d38
+Author: Kavin <20838718+FireMasterK@users.noreply.github.com>
+Date:   Sat Aug 23 10:56:52 2025 +0530
+
+    patch 1
+
+diff --git a/build.gradle.kts b/build.gradle.kts
+index c6ec5dc78..957ceb9a1 100644
+--- a/build.gradle.kts
++++ b/build.gradle.kts
+@@ -18,7 +18,7 @@ allprojects {
+ 
+     extensions.configure<JavaPluginExtension> {
+         toolchain {
+-            languageVersion.set(JavaLanguageVersion.of(11))
++            languageVersion.set(JavaLanguageVersion.of(21))
+         }
+     }
+ }
+diff --git a/extractor/src/main/java/org/schabi/newpipe/extractor/utils/JsonUtils.java b/extractor/src/main/java/org/schabi/newpipe/extractor/utils/JsonUtils.java
+index 850eba778..279a1a9b5 100644
+--- a/extractor/src/main/java/org/schabi/newpipe/extractor/utils/JsonUtils.java
++++ b/extractor/src/main/java/org/schabi/newpipe/extractor/utils/JsonUtils.java
+@@ -5,6 +5,7 @@ import com.grack.nanojson.JsonObject;
+ import com.grack.nanojson.JsonParser;
+ import com.grack.nanojson.JsonParserException;
+ 
++import com.grack.nanojson.LazyString;
+ import org.jsoup.Jsoup;
+ import org.jsoup.nodes.Document;
+ import org.schabi.newpipe.extractor.exceptions.ParsingException;
+@@ -52,7 +53,7 @@ public final class JsonUtils {
+     @Nonnull
+     public static String getString(@Nonnull final JsonObject object, @Nonnull final String path)
+             throws ParsingException {
+-        return getInstanceOf(object, path, String.class);
++        return getInstanceOf(object, path, LazyString.class).toString();
+     }
+ 
+     @Nonnull
+@@ -157,8 +158,8 @@ public final class JsonUtils {
+ 
+     public static List<String> getStringListFromJsonArray(@Nonnull final JsonArray array) {
+         return array.stream()
+-                .filter(String.class::isInstance)
+-                .map(String.class::cast)
++                .filter(LazyString.class::isInstance)
++                .map(Object::toString)
+                 .collect(Collectors.toList());
+     }
+ }
+diff --git a/gradle/libs.versions.toml b/gradle/libs.versions.toml
+index bd4897ce1..2f051d9c4 100644
+--- a/gradle/libs.versions.toml
++++ b/gradle/libs.versions.toml
+@@ -13,7 +13,7 @@ okhttp = "5.3.2"
+ protobuf-lib = "4.33.4"
+ protobuf-plugin = "0.9.6"
+ rhino = "1.8.1" # rhino 1.9.0 requires Android minSDK >= 26, see #1423
+-teamnewpipe-nanojson = "e9d656ddb49a412a5a0a5d5ef20ca7ef09549996"
++teamnewpipe-nanojson = "a507525e549a836c3a8b6ab7090dca38e92942ef"
+ 
+ [libraries]
+ google-jsr305 = { module = "com.google.code.findbugs:jsr305", version.ref = "jsr305" }
+@@ -27,7 +27,7 @@ junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher
+ jsoup = { module = "org.jsoup:jsoup", version.ref = "jsoup" }
+ mozilla-rhino-core = { module = "org.mozilla:rhino", version.ref = "rhino" }
+ mozilla-rhino-engine = { module = "org.mozilla:rhino-engine", version.ref = "rhino" }
+-newpipe-nanojson = { module = "com.github.TeamNewPipe:nanojson", version.ref = "teamnewpipe-nanojson" }
++newpipe-nanojson = { module = "com.github.FireMasterK:nanojson", version.ref = "teamnewpipe-nanojson" }
+ puppycrawl-checkstyle = { module = "com.puppycrawl.tools:checkstyle", version.ref = "checkstyle" }
+ squareup-okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+ 
