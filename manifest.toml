@@ -8,7 +8,7 @@ name = "Piped"
 description.en = "Alternative front-end for YouTube"
 description.fr = "Interface alternative pour YouTube"
 
-version = "2026.01.24~ynh3"
+version = "2026.01.24~ynh4"
 
 maintainers = [ "orhtej2" ]
 
@@ -51,6 +51,7 @@ ram.runtime = "50M"
         url = "https://github.com/TeamNewPipe/NewPipeExtractor/archive/refs/tags/v0.25.1.tar.gz"
         sha256 = "469332296498d32b74fe93c78d0e2f540f1163cabf703c65c6c94c3656daab26"
         autoupdate.strategy = "latest_github_tag"
+        autoupdate.upstream = "https://github.com/TeamNewPipe/NewPipeExtractor/"
 
         [resources.sources.api]
         url = "https://github.com/TeamPiped/Piped-Backend/archive/c5921f6b70762e78fed2cd0af8078c376b500228.tar.gz"
@@ -59,8 +60,8 @@ ram.runtime = "50M"
         autoupdate.upstream = "https://github.com/TeamPiped/Piped-Backend/"
 
         [resources.sources.proxy]
-        url = "https://github.com/TeamPiped/piped-proxy/archive/1de287fb6cfca6c8898c3343750a6d4fdd0ddb8c.tar.gz"
-        sha256 = "fa45caaaed163808f501bd4dbc44b93d63710f0f1f53e0b03091794c242f974a"
+        url = "https://github.com/TeamPiped/piped-proxy/archive/5881cc9e6825bb8b75c8c34d2ca7bd3ef4068038.tar.gz"
+        sha256 = "6189f92bff8c376814c5ab9ccbaf02c21ea3dd9835cac4778a2d89d789788c09"
         autoupdate.strategy = "latest_github_commit"
         autoupdate.upstream = "https://github.com/TeamPiped/piped-proxy/"
 
