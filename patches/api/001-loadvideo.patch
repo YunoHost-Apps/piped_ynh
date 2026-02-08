@@ -25,7 +25,7 @@ index 8be853a3..22d33fbc 100644
      implementation 'commons-codec:commons-codec:1.19.0'
      implementation 'org.bouncycastle:bcprov-jdk18on:1.81'
 -    implementation 'com.github.FireMasterK:NewPipeExtractor:92809cedefd89ce68bc4de8763e9d5f2760f5899'
-+    implementation 'net.newpipe:extractor:v0.25.0'
++    implementation 'net.newpipe:extractor:v0.25.2'
      implementation 'com.github.FireMasterK:nanojson:a507525e549a836c3a8b6ab7090dca38e92942ef'
      implementation 'com.fasterxml.jackson.core:jackson-core:2.19.2'
      implementation 'com.fasterxml.jackson.core:jackson-annotations:2.19.2'

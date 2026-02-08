@@ -8,7 +8,7 @@ name = "Piped"
 description.en = "Alternative front-end for YouTube"
 description.fr = "Interface alternative pour YouTube"
 
-version = "2026.01.24~ynh4"
+version = "2026.01.24~ynh5"
 
 maintainers = [ "orhtej2" ]
 
@@ -48,8 +48,8 @@ ram.runtime = "50M"
         autoupdate.strategy = "latest_github_commit"
 
         [resources.sources.npe]
-        url = "https://github.com/TeamNewPipe/NewPipeExtractor/archive/refs/tags/v0.25.1.tar.gz"
-        sha256 = "469332296498d32b74fe93c78d0e2f540f1163cabf703c65c6c94c3656daab26"
+        url = "https://github.com/TeamNewPipe/NewPipeExtractor/archive/refs/tags/v0.25.2.tar.gz"
+        sha256 = "6a53a9624c450bd71dff44067370887af5af39a7c389969e329583050b675d8a"
         autoupdate.strategy = "latest_github_tag"
         autoupdate.upstream = "https://github.com/TeamNewPipe/NewPipeExtractor/"
 
