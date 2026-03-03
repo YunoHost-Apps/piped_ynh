@@ -8,7 +8,7 @@ name = "Piped"
 description.en = "Alternative front-end for YouTube"
 description.fr = "Interface alternative pour YouTube"
 
-version = "2026.01.24~ynh3"
+version = "2026.02.20~ynh2"
 
 maintainers = [ "orhtej2" ]
 
@@ -43,24 +43,25 @@ ram.runtime = "50M"
 
     [resources.sources]
         [resources.sources.main]
-        url = "https://github.com/TeamPiped/Piped/archive/c4e6f40ed38316755f80b8853a85ce73bcbf4037.tar.gz"
-        sha256 = "05075d2c56d3564d9a51ecc196e07c666f34ba670e4e1e0730901ad1d657c885"
+        url = "https://github.com/TeamPiped/Piped/archive/268ea742c3bf8cfc008ab1ab6206ac807d0776df.tar.gz"
+        sha256 = "38e6d1e8daf86046c38670a02eed51d1818902f57589992fb8801496400abb16"
         autoupdate.strategy = "latest_github_commit"
 
         [resources.sources.npe]
-        url = "https://github.com/TeamNewPipe/NewPipeExtractor/archive/refs/tags/v0.25.1.tar.gz"
-        sha256 = "469332296498d32b74fe93c78d0e2f540f1163cabf703c65c6c94c3656daab26"
+        url = "https://github.com/TeamNewPipe/NewPipeExtractor/archive/refs/tags/v0.26.0.tar.gz"
+        sha256 = "045e557828febbb1207f8e3c3797feb58f8db92c408b4aa06a1ae0f2f4003bec"
         autoupdate.strategy = "latest_github_tag"
+        autoupdate.upstream = "https://github.com/TeamNewPipe/NewPipeExtractor/"
 
         [resources.sources.api]
-        url = "https://github.com/TeamPiped/Piped-Backend/archive/c5921f6b70762e78fed2cd0af8078c376b500228.tar.gz"
-        sha256 = "f02bdf3c5e8fa5211fd7736531fd79923d79f546e6185630e99485b0b5378a48"
+        url = "https://github.com/TeamPiped/Piped-Backend/archive/da5bcd76c82197491569c0df89bcdb4883c794e6.tar.gz"
+        sha256 = "9ace9313a1eb33dd3a40b4d8ae378583c9efac0489fd81a91ee848e2a3b02e57"
         autoupdate.strategy = "latest_github_commit"
         autoupdate.upstream = "https://github.com/TeamPiped/Piped-Backend/"
 
         [resources.sources.proxy]
-        url = "https://github.com/TeamPiped/piped-proxy/archive/1de287fb6cfca6c8898c3343750a6d4fdd0ddb8c.tar.gz"
-        sha256 = "fa45caaaed163808f501bd4dbc44b93d63710f0f1f53e0b03091794c242f974a"
+        url = "https://github.com/TeamPiped/piped-proxy/archive/0c802bd2790a07cc76c7808bb2dcf452711bbbc7.tar.gz"
+        sha256 = "c51b709743d357055a5e151ca58db138dfada64b22f4709f787263c15fdf0545"
         autoupdate.strategy = "latest_github_commit"
         autoupdate.upstream = "https://github.com/TeamPiped/piped-proxy/"
 
