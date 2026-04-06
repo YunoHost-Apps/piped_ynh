@@ -8,7 +8,7 @@ name = "Piped"
 description.en = "Alternative front-end for YouTube"
 description.fr = "Interface alternative pour YouTube"
 
-version = "2026.02.20~ynh5"
+version = "2026.04.06~ynh1"
 
 maintainers = [ "orhtej2" ]
 
@@ -43,8 +43,8 @@ ram.runtime = "50M"
 
     [resources.sources]
         [resources.sources.main]
-        url = "https://github.com/TeamPiped/Piped/archive/268ea742c3bf8cfc008ab1ab6206ac807d0776df.tar.gz"
-        sha256 = "38e6d1e8daf86046c38670a02eed51d1818902f57589992fb8801496400abb16"
+        url = "https://github.com/TeamPiped/Piped/archive/17149cebfb511ded11a6f9090eff9cfc97290f96.tar.gz"
+        sha256 = "c53d1c28e604aeaa26e570b6bd475aa7a30bd019f84020fb70a74da085136ca2"
         autoupdate.strategy = "latest_github_commit"
 
         [resources.sources.npe]
@@ -54,14 +54,14 @@ ram.runtime = "50M"
         autoupdate.upstream = "https://github.com/TeamNewPipe/NewPipeExtractor/"
 
         [resources.sources.api]
-        url = "https://github.com/TeamPiped/Piped-Backend/archive/da5bcd76c82197491569c0df89bcdb4883c794e6.tar.gz"
-        sha256 = "9ace9313a1eb33dd3a40b4d8ae378583c9efac0489fd81a91ee848e2a3b02e57"
+        url = "https://github.com/TeamPiped/Piped-Backend/archive/e3c7bdbb1e24ec27afe76e2f61b02d2dc662b49f.tar.gz"
+        sha256 = "76612b438bddc434790b87be2c5ad1f5242c6e449bec4ed97b7b14b7d79d6195"
         autoupdate.strategy = "latest_github_commit"
         autoupdate.upstream = "https://github.com/TeamPiped/Piped-Backend/"
 
         [resources.sources.proxy]
-        url = "https://github.com/TeamPiped/piped-proxy/archive/0b2a6ac999d77ecff3fc4943dc5c8480a7163422.tar.gz"
-        sha256 = "10b317f5970821a908b0b33572d00ba7c8223e0127f65428c003e02bcf8c7553"
+        url = "https://github.com/TeamPiped/piped-proxy/archive/38f3eb3ce40eb17ac46f818b8e7b7c0b11ed833f.tar.gz"
+        sha256 = "733433b2b2a64bef790cdf50490bfe95cef0871f9ba817aa3e97731b88d5938d"
         autoupdate.strategy = "latest_github_commit"
         autoupdate.upstream = "https://github.com/TeamPiped/piped-proxy/"
 
