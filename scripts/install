@@ -66,7 +66,6 @@ chmod 600 "$install_dir/config.properties"
 ynh_safe_rm "$install_dir/.gradle"
 ynh_safe_rm "$install_dir/.m2"
 ynh_safe_rm "$install_dir/build_api"
-ynh_safe_rm "$install_dir/npe"
 
 ynh_script_progression "Building Proxy..."
 
