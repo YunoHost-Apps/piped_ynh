@@ -24,8 +24,6 @@ ynh_setup_source --dest_dir="$install_dir/build"
 
 ynh_setup_source --dest_dir="$install_dir/build_api" --source_id="api"
 
-ynh_setup_source --dest_dir="$install_dir/npe" --source_id="npe"
-
 ynh_setup_source --dest_dir="$install_dir/build_proxy" --source_id="proxy"
 
 chown -R $app:www-data "$install_dir"
@@ -56,11 +54,6 @@ ynh_safe_rm "$install_dir/.local"
 ynh_safe_rm "$install_dir/.cache"
 
 ynh_script_progression "Building API..."
-
-pushd $install_dir/npe
-    ynh_hide_warnings ynh_exec_as_app JAVA_HOME=$install_dir/jdk ./gradlew publishToMavenLocal
-    ynh_hide_warnings ynh_exec_as_app JAVA_HOME=$install_dir/jdk ./gradlew --stop
-popd
 
 pushd $install_dir/build_api
     ynh_hide_warnings ynh_exec_as_app JAVA_HOME=$install_dir/jdk ./gradlew shadowJar
