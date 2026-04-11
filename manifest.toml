@@ -47,12 +47,6 @@ ram.runtime = "50M"
         sha256 = "c53d1c28e604aeaa26e570b6bd475aa7a30bd019f84020fb70a74da085136ca2"
         autoupdate.strategy = "latest_github_commit"
 
-        [resources.sources.npe]
-        url = "https://github.com/TeamNewPipe/NewPipeExtractor/archive/refs/tags/v0.26.0.tar.gz"
-        sha256 = "045e557828febbb1207f8e3c3797feb58f8db92c408b4aa06a1ae0f2f4003bec"
-        autoupdate.strategy = "latest_github_tag"
-        autoupdate.upstream = "https://github.com/TeamNewPipe/NewPipeExtractor/"
-
         [resources.sources.api]
         url = "https://github.com/TeamPiped/Piped-Backend/archive/e3c7bdbb1e24ec27afe76e2f61b02d2dc662b49f.tar.gz"
         sha256 = "76612b438bddc434790b87be2c5ad1f5242c6e449bec4ed97b7b14b7d79d6195"
