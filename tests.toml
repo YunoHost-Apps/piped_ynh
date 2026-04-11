@@ -16,4 +16,4 @@ test_format = 1.0
     # Commits to test upgrade from
     # -------------------------------
 
-    test_upgrade_from.de5c426440a504bc711cb7c478c245606646413a.name = "Upgrade from 2025.02.14~ynh1"
+    #test_upgrade_from.48c0f45f5f0d67c2612211f6b0e7293e344d0639.name = "Upgrade from 2026.02.20~ynh2"
