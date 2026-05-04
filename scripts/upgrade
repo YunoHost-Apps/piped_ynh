@@ -68,8 +68,7 @@ ynh_safe_rm "$install_dir/.cache"
 ynh_script_progression "Building API..."
 
 pushd $install_dir/build_api
-    ynh_hide_warnings ynh_exec_as_app JAVA_HOME=$install_dir/jdk ./gradlew shadowJar
-    ynh_hide_warnings ynh_exec_as_app JAVA_HOME=$install_dir/jdk ./gradlew --stop
+    ynh_hide_warnings ynh_exec_as_app JAVA_HOME=$install_dir/jdk ./gradlew shadowJar -Dorg.gradle.daemon=false
 popd
 
 ynh_safe_rm "$install_dir/piped.jar"
