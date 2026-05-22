@@ -35,8 +35,8 @@ ynh_script_progression "Building UI..."
 
 pushd $install_dir/build
     corepack enable
-    ynh_hide_warnings npm install -g corepack@latest
-    ynh_hide_warnings corepack prepare  pnpm@latest-9 --activate
+    ynh_hide_warnings npm install -g pnpm@latest-11
+    ynh_hide_warnings ynh_exec_as_app pnpm approve-builds core-js esbuild vue-demi
     ynh_hide_warnings ynh_exec_as_app pnpm install
     ynh_hide_warnings ynh_exec_as_app NODE_ENV=production pnpm build
     ynh_hide_warnings ynh_exec_as_app ./localizefonts.sh
