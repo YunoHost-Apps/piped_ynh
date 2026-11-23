@@ -8,7 +8,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__
-ExecStart=__INSTALL_DIR__/jdk/bin/java -server -Xmx1G -XX:+UnlockExperimentalVMOptions -XX:+HeapDumpOnOutOfMemoryError -XX:+OptimizeStringConcat -XX:+UseStringDeduplication -XX:+UseCompressedOops -XX:+UseNUMA -XX:+UseG1GC -XX:-UseBASE64Intrinsics -jar piped.jar
+ExecStart=__INSTALL_DIR__/jdk/bin/java -server -Xmx1G -XX:+UnlockExperimentalVMOptions -XX:+HeapDumpOnOutOfMemoryError -XX:+OptimizeStringConcat -XX:+UseStringDeduplication -XX:+UseCompressedOops -XX:+UseNUMA -XX:+UseG1GC -jar piped.jar
 StandardOutput=append:/var/log/__APP__/__APP__-api.log
 StandardError=inherit
 Environment=JAVA_HOME="__INSTALL_DIR__/jdk"
