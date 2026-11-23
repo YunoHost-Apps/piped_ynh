@@ -8,7 +8,7 @@ name = "Piped"
 description.en = "Alternative front-end for YouTube"
 description.fr = "Interface alternative pour YouTube"
 
-version = "2026.11.08~ynh3"
+version = "2026.11.08~ynh4"
 
 maintainers = [ "orhtej2" ]
 
@@ -54,18 +54,18 @@ ram.runtime = "50M"
         autoupdate.upstream = "https://github.com/TeamPiped/Piped-Backend/"
 
         [resources.sources.proxy]
-        url = "https://github.com/TeamPiped/piped-proxy/archive/3e74f2c0aa3c9a5379c35911e4dbe72bd81f7736.tar.gz"
-        sha256 = "b0b18e4818142a2035e81fe4b74c9f7c906172ba57df191f05df1689319dc4eb"
+        url = "https://github.com/TeamPiped/piped-proxy/archive/df0f6e8186cfabe04d8675eb2749af5f2b3efe6d.tar.gz"
+        sha256 = "61e605f92a88c4f9e6bfacc1c050ddc7922d0e20fd0f33d7471c29c39669bd7e"
         autoupdate.strategy = "latest_github_commit"
         autoupdate.upstream = "https://github.com/TeamPiped/piped-proxy/"
 
         [resources.sources.jdk]
-        amd64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jdk_x64_linux_hotspot_21.0.13_9.tar.gz"
-        amd64.sha256 = "d7f5d5cf865a2902b70ff549b97586a7d3f234e016f041ab447ea740c7d66d1c"
-        arm64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13%2B9/OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.13_9.tar.gz"
-        arm64.sha256 = "e3522e707fc7dbe2a72c30746b1e7068301a0213ecd213d4491f35a14eb55578"
+        amd64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13.1%2B2/OpenJDK21U-jdk_x64_linux_hotspot_21.0.13.1_2.tar.gz"
+        amd64.sha256 = "bb8a93f9ae6e7a693b2b721e85dbeff26ae1a77447985a8d7afcdd9c7cf6222e"
+        arm64.url = "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.13.1%2B2/OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.13.1_2.tar.gz"
+        arm64.sha256 = "8c72816a6b308842d5ed1f13e5826b69c567da4784f7238d7e800efa71fe54b1"
         autoupdate.strategy = "latest_github_release"
-        autoupdate.version_regex = "jdk-(\\d+\\.\\d+\\.\\d+)\\+(.*)"
+        autoupdate.version_regex = "jdk-(?P<major>\\d+(\\.\\d+)+)\\+(?P<rev>.*)"
         autoupdate.upstream = "https://github.com/adoptium/temurin21-binaries"
         autoupdate.asset.amd64 = "OpenJDK.*-jdk_x64_linux_hotspot_.*\\.tar\\.gz$"
         autoupdate.asset.arm64 = "OpenJDK.*-jdk_aarch64_linux_hotspot_.*\\.tar\\.gz$"
